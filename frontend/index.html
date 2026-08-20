@@ -27,11 +27,29 @@
         </div>
       </div>
 
+      <img
+        src="Flower.png"
+        class="bg-flower flower-left"
+        alt="Decorative Flower"
+      />
+      <img
+        src="Flower.png"
+        class="bg-flower flower-right"
+        alt="Decorative Flower"
+      />
+      <!-- Single Petals -->
+      <img src="single-petal.png" class="bg-petal petal-bl-1" alt="Petal" />
+      <img src="single-petal.png" class="bg-petal petal-bl-2" alt="Petal" />
+      <img src="single-petal.png" class="bg-petal petal-tr-1" alt="Petal" />
+      <img src="single-petal.png" class="bg-petal petal-tr-2" alt="Petal" />
       <div id="body-txt">
         <h1>A TRIBUTE TO</h1>
         <h1>OUR ORIGIN</h1>
       </div>
-      <img src="big-crown.png" class="big-crown-img" alt="" />
+      <div class="crown-float-wrapper">
+        <img src="big-crown.png" class="big-crown-img" alt="" />
+      </div>
+
       <img src="Ellipse 9.png" class="podium-shadow" alt="" />
 
       <div class="spl-btn-2">
@@ -75,5 +93,37 @@
         />
       </div>
     </div>
+
+    <!-- Dark Stats Section -->
+    <div id="stats-section">
+      <div class="stats-container">
+        <div class="stat-item">
+          <h2>5+</h2>
+          <p>SEASONS</p>
+        </div>
+        <div class="stat-item">
+          <h2>100+</h2>
+          <p>PARTICIPANTS</p>
+        </div>
+        <div class="stat-item">
+          <h2>20+</h2>
+          <p>PARTNERS</p>
+        </div>
+      </div>
+      <p class="stats-tagline">CELEBRATING WOMEN, CREATING IMPACT</p>
+    </div>
+
+    <script>
+      const headCrown = document.querySelector(".head-crown");
+      let isCrowned = false;
+
+      window.addEventListener("scroll", () => {
+        // Triggers permanent crown when scrolled down to landing point
+        if (!isCrowned && window.scrollY > 280) {
+          headCrown.classList.add("is-crowned");
+          isCrowned = true;
+        }
+      });
+    </script>
   </body>
 </html>

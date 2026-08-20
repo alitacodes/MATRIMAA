@@ -132,23 +132,23 @@ h1 {
 
 @keyframes crownDropBounce {
   0% {
-    transform: translate(-50%, 0) scale(1);
+    transform: translate(-50%, 0) scale(1) rotate(0deg);
   }
   80% {
-    transform: translate(-50%, 450px) scale(0.46);
+    transform: translate(-62%, 450px) scale(0.473) rotate(-2deg);
   }
   90% {
-    transform: translate(-50%, 432px) scale(0.47);
+    transform: translate(-58%, 432px) scale(0.48) rotate(-3deg);
   }
   100% {
-    transform: translate(-50%, 442px) scale(0.46);
+    transform: translate(-58.4%, 436px) scale(0.473) rotate(-3deg);
   }
 }
 
 .spl-btn-2 button {
   border: none;
-  background-color: #ed1b24;
-  color: #fffefe;
+  background-color: rgba(255, 133, 133, 0.5);
+  color: #ed1b24;
   font-size: 15px;
   font-weight: 600;
   font-family: "Zalando Sans", sans-serif;
@@ -160,8 +160,8 @@ h1 {
 }
 
 .spl-btn-2 button:hover {
-  background-color: rgba(255, 133, 133, 0.5);
-  color: #ed1b24;
+  background-color: #ed1b24;
+  color: #fffefe;
 }
 
 /* Red Spotlight Container */
@@ -318,4 +318,124 @@ h1 {
   width: 142px;
   height: auto;
   z-index: 3;
+  opacity: 0;
+  transition: opacity 0.4s ease-in-out;
+}
+
+.head-crown.is-crowned {
+  opacity: 1;
+}
+
+/* Decorative Background Flowers */
+.bg-flower {
+  position: absolute;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 1;
+  filter: drop-shadow(0 4px 15px rgba(237, 27, 36, 0.15));
+}
+
+.flower-left {
+  width: 110px;
+  height: auto;
+  top: 14%;
+  left: 26%;
+  transform: rotate(-25deg);
+}
+
+.flower-right {
+  width: 150px;
+  height: auto;
+  top: 46%;
+  right: 20%;
+  transform: rotate(148deg);
+}
+
+/* Decorative Single Petals */
+.bg-petal {
+  position: absolute;
+  z-index: 0;
+  pointer-events: none;
+
+  filter: drop-shadow(0 2px 10px rgba(237, 27, 36, 0.2));
+}
+
+/* Bottom-Left Petal Pair */
+.petal-bl-1 {
+  width: 16px;
+  height: auto;
+  top: 49%;
+  left: 25.5%;
+  transform: rotate(215deg);
+}
+
+.petal-bl-2 {
+  width: 27px;
+  height: auto;
+  top: 49%;
+  left: 26.8%;
+  transform: rotate(177deg);
+}
+
+/* Top-Right Petal Pair */
+.petal-tr-1 {
+  width: 16px;
+  height: auto;
+  top: 17%;
+  right: 26.3%;
+  transform: rotate(-25deg);
+}
+
+.petal-tr-2 {
+  width: 27px;
+  height: auto;
+  top: 14%;
+  right: 24%;
+  transform: rotate(24deg);
+}
+
+/* Dark Stats Section */
+#stats-section {
+  width: 100%;
+  background-color: #000000;
+  color: #ffffff;
+  padding: 60px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Zalando Sans", sans-serif;
+}
+
+.stats-container {
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+  max-width: 1000px;
+  width: 100%;
+  margin-bottom: 45px;
+}
+
+.stat-item {
+  text-align: center;
+}
+
+.stat-item h2 {
+  font-size: 52px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  margin-bottom: 6px;
+}
+
+.stat-item p {
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.stats-tagline {
+  font-size: 16px;
+  font-weight: 800;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  text-align: center;
 }
