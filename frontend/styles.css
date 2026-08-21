@@ -22,7 +22,6 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: rgba(255, 133, 133, 0.5);
   padding: 10px 20px;
   margin-top: 20px;
   border-radius: 40px;
@@ -41,7 +40,7 @@
   font-family: "Zalando Sans", sans-serif;
   border: none;
   background: transparent;
-  color: #fffefe;
+  color: #000000;
   font-size: 15px;
   font-weight: 600;
   padding: 8px 18px;
@@ -62,8 +61,8 @@
   font-size: 15px;
   font-weight: 600;
   font-family: "Zalando Sans", sans-serif;
-  padding: 8px 18px;
-  border-radius: 20px;
+  padding: 13px 18px;
+  border-radius: 50px;
   cursor: pointer;
   transition: all 0.4s ease-in-out;
 }
@@ -152,8 +151,8 @@ h1 {
   font-size: 15px;
   font-weight: 600;
   font-family: "Zalando Sans", sans-serif;
-  padding: 8px 18px;
-  border-radius: 20px;
+  padding: 13px 18px;
+  border-radius: 50px;
   cursor: pointer;
   transition: all 0.4s ease-in-out;
   margin-top: 230px;
