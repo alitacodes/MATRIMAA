@@ -1,0 +1,298 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Zalando+Sans:ital,wght@0,200..900;1,200..900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Partnership — Matrimaa</title>
+  </head>
+  <body class="partnership-page">
+    <div id="page-content">
+      <!-- Fixed Navigation Bar -->
+      <nav id="navbar">
+        <div class="nav-brand">
+          <a href="index.html">
+            <img
+              src="matrimaa-logo.png"
+              alt="Matrimaa Logo"
+              class="nav-logo"
+              onerror="
+                this.style.display = 'none';
+                this.nextElementSibling.style.display = 'block';
+              "
+            />
+            <span class="logo-text-fallback">MATRIMAA</span>
+          </a>
+        </div>
+
+        <div id="nav-buttons">
+          <button onclick="window.location.href = 'index.html'">HOME</button>
+          <button onclick="window.location.href = 'index.html#gallery-section'">
+            JOURNEY
+          </button>
+          <button onclick="window.location.href = 'index.html#red-bg'">
+            ABOUT US
+          </button>
+          <button
+            onclick="window.location.href = 'partnership.html'"
+            class="active"
+          >
+            JOIN US
+          </button>
+        </div>
+
+        <div class="spl-btn">
+          <button onclick="openFormModal()">PARTNER WITH US</button>
+        </div>
+      </nav>
+
+      <!-- Main Header & Filter Section -->
+      <section id="partner-section">
+        <div class="partner-header">
+          <h1>Trusted by partners, sponsors and the community</h1>
+
+          <!-- Filter Pills -->
+          <div class="filter-pills">
+            <button class="pill active" onclick="filterSponsors('all', this)">
+              All
+            </button>
+            <button class="pill" onclick="filterSponsors('title', this)">
+              Title Sponsors
+            </button>
+            <button class="pill" onclick="filterSponsors('partners', this)">
+              Partners
+            </button>
+            <button class="pill" onclick="filterSponsors('grooming', this)">
+              Grooming & Media
+            </button>
+          </div>
+
+          <!-- Form Trigger CTA -->
+          <div class="cta-wrapper">
+            <button class="btn-become-partner" onclick="openFormModal()">
+              BECOME OUR PARTNER
+            </button>
+          </div>
+        </div>
+
+        <!-- Sponsors Grid -->
+        <div id="sponsors-grid" class="sponsors-grid">
+          <div class="sponsor-card title-card" data-category="title">
+            <span class="badge">TITLE SPONSOR</span>
+            <h3>IIHM</h3>
+          </div>
+
+          <div class="sponsor-card" data-category="grooming">
+            <span class="badge">MEDIA PARTNER</span>
+            <h3>KOLKATANAMA</h3>
+          </div>
+
+          <div class="sponsor-card" data-category="partners">
+            <h3>WHITE ZONE</h3>
+          </div>
+
+          <div class="sponsor-card" data-category="partners">
+            <h3>SKIN BEE</h3>
+          </div>
+
+          <div class="sponsor-card" data-category="partners">
+            <h3>ADDYA FOODS</h3>
+          </div>
+
+          <div class="sponsor-card" data-category="partners">
+            <h3>TANI'S CREATIONS</h3>
+          </div>
+
+          <div class="sponsor-card" data-category="partners">
+            <h3>DEBDIPA'S NATURE HUB</h3>
+          </div>
+
+          <div class="sponsor-card" data-category="partners">
+            <h3>TANDRA'S</h3>
+          </div>
+
+          <div class="sponsor-card" data-category="partners">
+            <h3>DECOHOME</h3>
+          </div>
+
+          <div class="sponsor-card" data-category="grooming">
+            <span class="badge">GROOMING PARTNER</span>
+            <h3>GROOMING DESTINATION</h3>
+          </div>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer id="footer-section">
+        <div class="footer-container">
+          <div class="footer-col brand-col">
+            <p class="footer-tagline">
+              Honoring Motherhood — From Regional to Global Recognition.
+            </p>
+            <div class="social-links">
+              <a href="#" aria-label="Instagram">📷</a>
+              <a href="#" aria-label="Facebook">f</a>
+              <a href="#" aria-label="YouTube">▶</a>
+            </div>
+          </div>
+
+          <div class="footer-col contact-col">
+            <h4>C O N T A C T</h4>
+            <ul class="contact-list">
+              <li><span class="icon">📞</span> +91 9147712795</li>
+              <li><span class="icon">📍</span> Kolkata: BIA, Chinar Park</li>
+              <li><span class="icon">🌐</span> www.groomingdestination.com</li>
+            </ul>
+          </div>
+
+          <div class="footer-col cta-col">
+            <h4>B E G I N &nbsp; Y O U R &nbsp; J O U R N E Y</h4>
+            <p>
+              Auditions open across Kolkata, Durgapur, Siliguri &amp; Bangalore
+              for Season 5.
+            </p>
+            <button class="footer-btn" onclick="openFormModal()">
+              REGISTER NOW
+            </button>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <hr class="footer-divider" />
+          <p>
+            © 2026 MATRIMAA. All rights reserved. Crafted in honor of every
+            mother's story.
+          </p>
+        </div>
+      </footer>
+    </div>
+
+    <!-- Modal Form Overlay -->
+    <div id="form-modal" class="modal-overlay">
+      <div class="modal-card">
+        <button class="modal-close" onclick="closeFormModal()">&times;</button>
+        <h2>Become a Partner / Participant</h2>
+        <p class="form-desc">
+          Fill out your details below and our team will get in touch with you
+          shortly.
+        </p>
+
+        <form
+          class="partner-form"
+          onsubmit="
+            event.preventDefault();
+            alert('Application submitted successfully!');
+            closeFormModal();
+          "
+        >
+          <div class="form-group">
+            <label for="fullname">Full Name</label>
+            <input
+              type="text"
+              id="fullname"
+              placeholder="Enter your full name"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input
+              type="email"
+              id="email"
+              placeholder="Enter your email"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input
+              type="tel"
+              id="phone"
+              placeholder="Enter phone number"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="category">I want to join as</label>
+            <select id="category" required>
+              <option value="">Select Category</option>
+              <option value="participant">Participant (Season 5)</option>
+              <option value="sponsor">Sponsor / Partner</option>
+              <option value="mentor">Mentor / Jury Member</option>
+              <option value="volunteer">Volunteer / Media Partner</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="city">City</label>
+            <input
+              type="text"
+              id="city"
+              placeholder="Kolkata, Durgapur, Siliguri, Bangalore, etc."
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="message">Message / Details</label>
+            <textarea
+              id="message"
+              rows="3"
+              placeholder="Tell us about yourself or your organization..."
+            ></textarea>
+          </div>
+
+          <button type="submit" class="form-submit-btn">
+            SUBMIT APPLICATION
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <script>
+      function openFormModal() {
+        document.getElementById("form-modal").classList.add("active");
+        document.getElementById("page-content").classList.add("blurred");
+      }
+
+      function closeFormModal() {
+        document.getElementById("form-modal").classList.remove("active");
+        document.getElementById("page-content").classList.remove("blurred");
+      }
+
+      function filterSponsors(category, btnElement) {
+        document
+          .querySelectorAll(".filter-pills .pill")
+          .forEach((pill) => pill.classList.remove("active"));
+        btnElement.classList.add("active");
+
+        const cards = document.querySelectorAll(".sponsor-card");
+        cards.forEach((card) => {
+          const cardCat = card.getAttribute("data-category");
+          if (category === "all" || cardCat === category) {
+            card.style.display = "flex";
+          } else {
+            card.style.display = "none";
+          }
+        });
+      }
+
+      document
+        .getElementById("form-modal")
+        .addEventListener("click", function (e) {
+          if (e.target === this) {
+            closeFormModal();
+          }
+        });
+    </script>
+  </body>
+</html>
