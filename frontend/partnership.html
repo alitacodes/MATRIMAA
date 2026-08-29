@@ -3,296 +3,284 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Partner With Us | Matrimaa</title>
+
+    <!-- Stylesheets -->
     <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="partnership.css" />
+
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Zalando+Sans:ital,wght@0,200..900;1,200..900&display=swap"
       rel="stylesheet"
     />
-    <title>Partnership — Matrimaa</title>
   </head>
-  <body class="partnership-page">
-    <div id="page-content">
-      <!-- Fixed Navigation Bar -->
-      <nav id="navbar">
-        <div class="nav-brand">
-          <a href="index.html">
-            <img
-              src="matrimaa-logo.png"
-              alt="Matrimaa Logo"
-              class="nav-logo"
-              onerror="
-                this.style.display = 'none';
-                this.nextElementSibling.style.display = 'block';
-              "
-            />
-            <span class="logo-text-fallback">MATRIMAA</span>
-          </a>
-        </div>
+  <body class="partnership-body">
+    <!-- NAVBAR -->
+    <nav id="navbar">
+      <a href="index.html">
+        <img src="matrimaa-logo.png" alt="Matrimaa Logo" />
+      </a>
 
-        <div id="nav-buttons">
-          <button onclick="window.location.href = 'index.html'">HOME</button>
-          <button onclick="window.location.href = 'index.html#gallery-section'">
-            JOURNEY
-          </button>
-          <button onclick="window.location.href = 'index.html#red-bg'">
-            ABOUT US
-          </button>
-          <button
-            onclick="window.location.href = 'partnership.html'"
-            class="active"
-          >
-            JOIN US
-          </button>
-        </div>
+      <div id="nav-buttons">
+        <a href="index.html"><button type="button">HOME</button></a>
+        <button type="button">JOURNEY</button>
+        <button type="button">ABOUT US</button>
+        <button type="button">JOIN US</button>
+      </div>
 
-        <div class="spl-btn">
-          <button onclick="openFormModal()">PARTNER WITH US</button>
-        </div>
-      </nav>
+      <div class="spl-btn">
+        <a href="partnership.html"
+          ><button type="button">PARTNER WITH US</button></a
+        >
+      </div>
+    </nav>
 
-      <!-- Main Header & Filter Section -->
-      <section id="partner-section">
-        <div class="partner-header">
-          <h1>Trusted by partners, sponsors and the community</h1>
+    <!-- HERO SECTION -->
+    <header id="partnership-hero">
+      <img
+        src="Flower.png"
+        class="bg-flower flower-left"
+        alt="Decorative Flower"
+      />
+      <img
+        src="Flower.png"
+        class="bg-flower flower-right"
+        alt="Decorative Flower"
+      />
 
-          <!-- Filter Pills -->
-          <div class="filter-pills">
-            <button class="pill active" onclick="filterSponsors('all', this)">
-              All
-            </button>
-            <button class="pill" onclick="filterSponsors('title', this)">
-              Title Sponsors
-            </button>
-            <button class="pill" onclick="filterSponsors('partners', this)">
-              Partners
-            </button>
-            <button class="pill" onclick="filterSponsors('grooming', this)">
-              Grooming & Media
-            </button>
+      <div class="hero-content">
+        <!-- Ellipse Sponsors Ring -->
+        <div class="ellipse-sponsors-wrapper">
+          <div class="ellipse-sponsor sp-1"><span>IIHM (Title)</span></div>
+          <div class="ellipse-sponsor sp-2"><span>Kolkatanama</span></div>
+          <div class="ellipse-sponsor sp-3"><span>White Zone</span></div>
+          <div class="ellipse-sponsor sp-4"><span>Skin Bee</span></div>
+          <div class="ellipse-sponsor sp-5"><span>Addya Foods</span></div>
+          <div class="ellipse-sponsor sp-6"><span>Tani's Creations</span></div>
+          <div class="ellipse-sponsor sp-7">
+            <span>Debdipa's Nature Hub</span>
           </div>
-
-          <!-- Form Trigger CTA -->
-          <div class="cta-wrapper">
-            <button class="btn-become-partner" onclick="openFormModal()">
-              BECOME OUR PARTNER
-            </button>
+          <div class="ellipse-sponsor sp-8"><span>Tandra's</span></div>
+          <div class="ellipse-sponsor sp-9"><span>Decohome</span></div>
+          <div class="ellipse-sponsor sp-10">
+            <span>Grooming Destination</span>
           </div>
         </div>
 
-        <!-- Sponsors Grid -->
-        <div id="sponsors-grid" class="sponsors-grid">
-          <div class="sponsor-card title-card" data-category="title">
-            <span class="badge">TITLE SPONSOR</span>
-            <h3>IIHM</h3>
+        <h1 class="page-title">OUR SPONSORS</h1>
+        <p class="hero-subtitle">
+          COLLABORATE WITH EAST INDIA'S PREMIER PLATFORM CELEBRATING MOTHERHOOD
+        </p>
+      </div>
+    </header>
+
+    <!-- MAIN PARTNERSHIP CONTENT -->
+    <main class="partnership-container">
+      <!-- WHY PARTNER SECTION -->
+      <section class="partner-benefits-section">
+        <div class="section-title-wrapper">
+          <h2><span>Why Partner With Us?</span></h2>
+        </div>
+
+        <div class="benefits-grid">
+          <div class="card benefit-card">
+            <h4>ENGAGEMENT</h4>
+            <h2>DIRECT REACH</h2>
+            <p>
+              Connect directly with thousands of mothers, families, and
+              decision-makers across key East Indian metros.
+            </p>
           </div>
 
-          <div class="sponsor-card" data-category="grooming">
-            <span class="badge">MEDIA PARTNER</span>
-            <h3>KOLKATANAMA</h3>
+          <div class="card benefit-card">
+            <h4>BRANDING</h4>
+            <h2>HIGH VISIBILITY</h2>
+            <p>
+              Gain extensive coverage across digital, print, outdoor, and live
+              stage media throughout Season 5.
+            </p>
           </div>
 
-          <div class="sponsor-card" data-category="partners">
-            <h3>WHITE ZONE</h3>
-          </div>
-
-          <div class="sponsor-card" data-category="partners">
-            <h3>SKIN BEE</h3>
-          </div>
-
-          <div class="sponsor-card" data-category="partners">
-            <h3>ADDYA FOODS</h3>
-          </div>
-
-          <div class="sponsor-card" data-category="partners">
-            <h3>TANI'S CREATIONS</h3>
-          </div>
-
-          <div class="sponsor-card" data-category="partners">
-            <h3>DEBDIPA'S NATURE HUB</h3>
-          </div>
-
-          <div class="sponsor-card" data-category="partners">
-            <h3>TANDRA'S</h3>
-          </div>
-
-          <div class="sponsor-card" data-category="partners">
-            <h3>DECOHOME</h3>
-          </div>
-
-          <div class="sponsor-card" data-category="grooming">
-            <span class="badge">GROOMING PARTNER</span>
-            <h3>GROOMING DESTINATION</h3>
+          <div class="card benefit-card">
+            <h4>COMMUNITY</h4>
+            <h2>SOCIAL IMPACT</h2>
+            <p>
+              Align your brand with empowerment, social recognition, and
+              meaningful cultural initiatives.
+            </p>
           </div>
         </div>
       </section>
 
-      <!-- Footer -->
-      <footer id="footer-section">
-        <div class="footer-container">
-          <div class="footer-col brand-col">
-            <p class="footer-tagline">
-              Honoring Motherhood — From Regional to Global Recognition.
-            </p>
-            <div class="social-links">
-              <a href="#" aria-label="Instagram">📷</a>
-              <a href="#" aria-label="Facebook">f</a>
-              <a href="#" aria-label="YouTube">▶</a>
-            </div>
-          </div>
-
-          <div class="footer-col contact-col">
-            <h4>C O N T A C T</h4>
-            <ul class="contact-list">
-              <li><span class="icon">📞</span> +91 9147712795</li>
-              <li><span class="icon">📍</span> Kolkata: BIA, Chinar Park</li>
-              <li><span class="icon">🌐</span> www.groomingdestination.com</li>
-            </ul>
-          </div>
-
-          <div class="footer-col cta-col">
-            <h4>B E G I N &nbsp; Y O U R &nbsp; J O U R N E Y</h4>
+      <!-- INQUIRY FORM SECTION -->
+      <section class="partner-form-section">
+        <div class="form-glass-card">
+          <div class="form-header">
+            <h2>BECOME A PARTNER</h2>
             <p>
-              Auditions open across Kolkata, Durgapur, Siliguri &amp; Bangalore
-              for Season 5.
+              Fill out the form below and our team will get in touch with a
+              customized sponsorship package.
             </p>
-            <button class="footer-btn" onclick="openFormModal()">
-              REGISTER NOW
-            </button>
           </div>
+
+          <form
+            class="partner-form"
+            action="#"
+            method="POST"
+            onsubmit="event.preventDefault()"
+          >
+            <div class="form-row">
+              <div class="form-group">
+                <label for="company-name">ORGANIZATION / BRAND NAME</label>
+                <input
+                  type="text"
+                  id="company-name"
+                  name="company"
+                  placeholder="Enter brand name"
+                  required
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="contact-person">CONTACT PERSON</label>
+                <input
+                  type="text"
+                  id="contact-person"
+                  name="name"
+                  placeholder="Enter your full name"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="email">EMAIL ADDRESS</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="name@company.com"
+                  required
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="phone">PHONE NUMBER</label>
+                <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  placeholder="+91 XXXXX XXXXX"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="partnership-type">PARTNERSHIP CATEGORY</label>
+              <select id="partnership-type" name="type" required>
+                <option value="" disabled selected>
+                  Select partnership tier
+                </option>
+                <option value="title">Title Sponsor</option>
+                <option value="powered-by">Powered By Partner</option>
+                <option value="associate">Associate Partner</option>
+                <option value="grooming">Grooming & Styling Partner</option>
+                <option value="media">Media & PR Partner</option>
+                <option value="other">Other / Custom Collaboration</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="message">MESSAGE / PROPOSAL DETAILS</label>
+              <textarea
+                id="message"
+                name="message"
+                rows="4"
+                placeholder="Tell us about your brand goals and partnership expectations..."
+              ></textarea>
+            </div>
+
+            <div class="form-submit-wrapper">
+              <button type="submit" class="spl-btn-submit">
+                SUBMIT PROPOSAL
+              </button>
+            </div>
+          </form>
         </div>
+      </section>
+    </main>
 
-        <div class="footer-bottom">
-          <hr class="footer-divider" />
-          <p>
-            © 2026 MATRIMAA. All rights reserved. Crafted in honor of every
-            mother's story.
-          </p>
-        </div>
-      </footer>
-    </div>
-
-    <!-- Modal Form Overlay -->
-    <div id="form-modal" class="modal-overlay">
-      <div class="modal-card">
-        <button class="modal-close" onclick="closeFormModal()">&times;</button>
-        <h2>Become a Partner / Participant</h2>
-        <p class="form-desc">
-          Fill out your details below and our team will get in touch with you
-          shortly.
-        </p>
-
-        <form
-          class="partner-form"
-          onsubmit="
-            event.preventDefault();
-            alert('Application submitted successfully!');
-            closeFormModal();
-          "
-        >
-          <div class="form-group">
-            <label for="fullname">Full Name</label>
-            <input
-              type="text"
-              id="fullname"
-              placeholder="Enter your full name"
-              required
-            />
-          </div>
-
-          <div class="form-group">
-            <label for="email">Email Address</label>
-            <input
-              type="email"
-              id="email"
-              placeholder="Enter your email"
-              required
-            />
-          </div>
-
-          <div class="form-group">
-            <label for="phone">Phone Number</label>
-            <input
-              type="tel"
-              id="phone"
-              placeholder="Enter phone number"
-              required
-            />
-          </div>
-
-          <div class="form-group">
-            <label for="category">I want to join as</label>
-            <select id="category" required>
-              <option value="">Select Category</option>
-              <option value="participant">Participant (Season 5)</option>
-              <option value="sponsor">Sponsor / Partner</option>
-              <option value="mentor">Mentor / Jury Member</option>
-              <option value="volunteer">Volunteer / Media Partner</option>
-            </select>
-          </div>
-
-          <div class="form-group">
-            <label for="city">City</label>
-            <input
-              type="text"
-              id="city"
-              placeholder="Kolkata, Durgapur, Siliguri, Bangalore, etc."
-              required
-            />
-          </div>
-
-          <div class="form-group">
-            <label for="message">Message / Details</label>
-            <textarea
-              id="message"
-              rows="3"
-              placeholder="Tell us about yourself or your organization..."
-            ></textarea>
-          </div>
-
-          <button type="submit" class="form-submit-btn">
-            SUBMIT APPLICATION
-          </button>
-        </form>
+    <!-- FOOTER & SPONSORS SECTION -->
+    <footer id="footer-section">
+      <div class="sponsors-header">
+        <h2>S P O N S O R S &nbsp;&amp;&nbsp; P A R T N E R S</h2>
       </div>
-    </div>
+
+      <!-- Main Grid Layout -->
+      <div class="footer-container">
+        <!-- Column 1: Brand -->
+        <div class="footer-col brand-col">
+          <p class="footer-tagline">
+            Honoring Motherhood — From Regional to Global Recognition.
+          </p>
+
+          <div class="social-links">
+            <a href="#" aria-label="Instagram">📷</a>
+            <a href="#" aria-label="Facebook">f</a>
+            <a href="#" aria-label="YouTube">▶</a>
+          </div>
+        </div>
+
+        <!-- Column 2: Contact -->
+        <div class="footer-col contact-col">
+          <h4>C O N T A C T</h4>
+
+          <ul class="contact-list">
+            <li><span class="icon">📞</span> +91 9147712795</li>
+            <li><span class="icon">📍</span> Kolkata: BIA, Chinar Park</li>
+            <li><span class="icon">🌐</span> www.groomingdestination.com</li>
+          </ul>
+        </div>
+
+        <!-- Column 3: CTA Button -->
+        <div class="footer-col cta-col">
+          <h4>B E G I N &nbsp; Y O U R &nbsp; J O U R N E Y</h4>
+
+          <p>
+            Auditions open across Kolkata, Durgapur, Siliguri &amp; Bangalore
+            for Season 5.
+          </p>
+
+          <button type="button" class="footer-btn">REGISTER NOW</button>
+        </div>
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="footer-bottom">
+        <hr class="footer-divider" />
+
+        <p>
+          © 2026 MATRIMAA. All rights reserved. Crafted in honor of every
+          mother's story.
+        </p>
+      </div>
+    </footer>
 
     <script>
-      function openFormModal() {
-        document.getElementById("form-modal").classList.add("active");
-        document.getElementById("page-content").classList.add("blurred");
-      }
+      const navbar = document.querySelector("#navbar");
 
-      function closeFormModal() {
-        document.getElementById("form-modal").classList.remove("active");
-        document.getElementById("page-content").classList.remove("blurred");
-      }
-
-      function filterSponsors(category, btnElement) {
-        document
-          .querySelectorAll(".filter-pills .pill")
-          .forEach((pill) => pill.classList.remove("active"));
-        btnElement.classList.add("active");
-
-        const cards = document.querySelectorAll(".sponsor-card");
-        cards.forEach((card) => {
-          const cardCat = card.getAttribute("data-category");
-          if (category === "all" || cardCat === category) {
-            card.style.display = "flex";
-          } else {
-            card.style.display = "none";
-          }
-        });
-      }
-
-      document
-        .getElementById("form-modal")
-        .addEventListener("click", function (e) {
-          if (e.target === this) {
-            closeFormModal();
-          }
-        });
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 20) {
+          navbar.classList.add("scrolled");
+        } else {
+          navbar.classList.remove("scrolled");
+        }
+      });
     </script>
   </body>
 </html>

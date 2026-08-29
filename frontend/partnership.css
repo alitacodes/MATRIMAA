@@ -1,0 +1,458 @@
+/* ==========================================
+   PARTNERSHIP PAGE STYLES (partnership.css)
+   ========================================== */
+
+/* Page Setup */
+body.partnership-body {
+  background-color: #000000;
+  color: #ffffff;
+  font-family: "Zalando Sans", sans-serif;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+/* Hero Section Styling (Broadened White Area) */
+#partnership-hero {
+  position: relative;
+  min-height: 80vh;
+  width: 100%;
+  background-image: url("bg-2.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 180px 40px 140px;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+#partnership-hero .hero-content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 1000px;
+  padding: 90px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.page-title {
+  font-size: 48px;
+  line-height: 1.2;
+  font-family: "Zalando Sans", sans-serif;
+  color: #000000;
+  margin-top: 10px;
+  letter-spacing: 2px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.hero-subtitle {
+  font-size: 15px;
+  font-weight: 600;
+  color: #f59ba2;
+  letter-spacing: 2.5px;
+  margin-top: 18px;
+  max-width: 750px;
+  text-transform: uppercase;
+}
+
+/* Decorative Flowers */
+.bg-flower {
+  position: absolute;
+  z-index: 1;
+  pointer-events: none;
+  opacity: 0.85;
+}
+
+.flower-left {
+  top: 41%;
+  left: 32%;
+  width: 75px;
+}
+
+.flower-right {
+  top: 49%;
+  right: 32%;
+  width: 75px;
+}
+
+/* Ellipse Sponsors Layout */
+.ellipse-sponsors-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.ellipse-sponsor {
+  position: absolute;
+  pointer-events: auto;
+  transform: translate(-50%, -50%);
+  background: rgba(255, 255, 255, 0.9);
+  border: 1.5px solid rgba(230, 0, 18, 0.35);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  padding: 8px 18px;
+  border-radius: 30px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  font-size: 13px;
+  font-weight: 700;
+  color: #111111;
+  white-space: nowrap;
+  letter-spacing: 0.5px;
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.ellipse-sponsor:hover {
+  transform: translate(-50%, -50%) scale(1.08);
+  border-color: #e60012;
+  box-shadow: 0 8px 22px rgba(230, 0, 18, 0.2);
+}
+
+/* Ellipse Coordinates for 10 Sponsors */
+.ellipse-sponsor.sp-1 {
+  top: 12%;
+  left: 10%;
+} /* Top Left Far */
+.ellipse-sponsor.sp-2 {
+  top: -2%;
+  left: 30%;
+} /* Top Mid Left */
+.ellipse-sponsor.sp-3 {
+  top: -12%;
+  left: 50%;
+} /* Top Center */
+.ellipse-sponsor.sp-4 {
+  top: -2%;
+  left: 70%;
+} /* Top Mid Right */
+.ellipse-sponsor.sp-5 {
+  top: 12%;
+  left: 90%;
+} /* Top Right Far */
+
+.ellipse-sponsor.sp-6 {
+  top: 88%;
+  left: 90%;
+} /* Bottom Right Far */
+.ellipse-sponsor.sp-7 {
+  top: 102%;
+  left: 70%;
+} /* Bottom Mid Right */
+.ellipse-sponsor.sp-8 {
+  top: 112%;
+  left: 50%;
+} /* Bottom Center */
+.ellipse-sponsor.sp-9 {
+  top: 102%;
+  left: 30%;
+} /* Bottom Mid Left */
+.ellipse-sponsor.sp-10 {
+  top: 88%;
+  left: 10%;
+} /* Bottom Left Far */
+
+/* Main Container */
+.partnership-container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 80px 0 100px;
+}
+
+/* Benefits Section */
+.section-title-wrapper {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.section-title-wrapper h2 {
+  color: #ffffff;
+  font-size: 42px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin: 0;
+}
+
+.section-title-wrapper h2 span {
+  background: linear-gradient(
+    to right,
+    #e60012 0%,
+    #f59ba2 25%,
+    #fae2e5 50%,
+    #f59ba2 75%,
+    #e60012 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-bottom: 80px;
+}
+
+.benefit-card {
+  position: relative !important;
+  top: auto !important;
+  left: auto !important;
+  right: auto !important;
+  bottom: auto !important;
+  width: 100% !important;
+  height: auto !important;
+  min-height: 220px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  text-align: left;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 30px;
+  box-sizing: border-box;
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.benefit-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(245, 155, 162, 0.4);
+}
+
+.benefit-card h4 {
+  font-size: 12px;
+  letter-spacing: 2px;
+  color: #f59ba2;
+  margin: 0 0 8px 0;
+}
+
+.benefit-card h2 {
+  font-size: 22px;
+  letter-spacing: 1px;
+  color: #ffffff;
+  margin: 0;
+}
+
+.benefit-card p {
+  margin-top: 12px;
+  font-size: 14px;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+/* Glassmorphic Form Container */
+.partner-form-section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.form-glass-card {
+  width: 100%;
+  max-width: 850px;
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 30px;
+  padding: 50px 45px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+  box-sizing: border-box;
+}
+
+.form-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.form-header h2 {
+  font-size: 32px;
+  color: #ffffff;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+.form-header p {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 15px;
+  margin: 0;
+}
+
+/* Form Layout & Elements */
+.partner-form {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group label {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  color: #f59ba2;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  padding: 14px 18px;
+  color: #ffffff;
+  font-family: "Zalando Sans", sans-serif;
+  font-size: 14px;
+  outline: none;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: rgba(255, 255, 255, 0.35);
+}
+
+.form-group select {
+  cursor: pointer;
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%22%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23f59ba2%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E");
+  background-repeat: no-repeat;
+  background-position: right 18px top 50%;
+  background-size: 12px auto;
+}
+
+.form-group select option {
+  background-color: #111111;
+  color: #ffffff;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: #ed1b24;
+  box-shadow: 0 0 12px rgba(237, 27, 36, 0.3);
+  background: rgba(0, 0, 0, 0.6);
+}
+
+/* Submit Button */
+.form-submit-wrapper {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.spl-btn-submit {
+  border: none;
+  background: linear-gradient(
+    to right,
+    #ff0d25 0%,
+    #f59ba2 25%,
+    #fae2e5 50%,
+    #f59ba2 75%,
+    #ff0d25 100%
+  );
+  background-size: 200% 100%;
+  background-position: 0% 0%;
+  color: #000000;
+  font-size: 15px;
+  font-weight: 700;
+  font-family: "Zalando Sans", sans-serif;
+  letter-spacing: 1.5px;
+  padding: 15px 45px;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0 6px 20px rgba(237, 27, 36, 0.25);
+  transition:
+    background-position 0.6s ease-in-out,
+    transform 0.4s ease-in-out,
+    box-shadow 0.4s ease-in-out;
+}
+
+.spl-btn-submit:hover {
+  background-position: 100% 0%;
+  transform: scale(1.04);
+  box-shadow: 0 10px 25px rgba(237, 27, 36, 0.45);
+}
+
+.sponsor-logo-placeholder {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: rgba(245, 155, 162, 0.15);
+  border: 1px dashed #f59ba2;
+  display: inline-block;
+  flex-shrink: 0;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 900px) {
+  .benefits-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .ellipse-sponsors-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+
+  .ellipse-sponsor {
+    position: static !important;
+    transform: none !important;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .page-title {
+    font-size: 32px;
+  }
+
+  #partnership-hero {
+    min-height: auto;
+    padding-top: 140px;
+    padding-bottom: 60px;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .form-glass-card {
+    padding: 30px 20px;
+  }
+
+  .flower-left,
+  .flower-right {
+    display: none;
+  }
+}
