@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Join Us | Matrimaa Season 5</title>
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="join-us.css" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Zalando+Sans:ital,wght@0,200..900;1,200..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="join-body">
+    <!-- NAVBAR -->
+    <nav id="navbar">
+      <a href="index.html">
+        <img src="matrimaa-logo.png" alt="Matrimaa Logo" />
+      </a>
+
+      <div id="nav-buttons">
+        <a href="index.html"><button type="button">HOME</button></a>
+        <a href="index.html#stats-section"
+          ><button type="button">JOURNEY</button></a
+        >
+        <a href="index.html#red-bg"><button type="button">ABOUT US</button></a>
+        <a href="join-us.html"
+          ><button type="button" class="nav-active">JOIN US</button></a
+        >
+      </div>
+
+      <div class="spl-btn">
+        <a href="partnership.html"
+          ><button type="button">PARTNER WITH US</button></a
+        >
+      </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <header id="join-hero">
+      <img
+        src="Flower.png"
+        class="bg-flower flower-left"
+        alt="Decorative Flower"
+      />
+      <img
+        src="Flower.png"
+        class="bg-flower flower-right"
+        alt="Decorative Flower"
+      />
+
+      <!-- Single Petal Accents -->
+      <img src="single-petal.png" class="bg-petal petal-bl-1" alt="Petal" />
+      <img src="single-petal.png" class="bg-petal petal-tr-1" alt="Petal" />
+
+      <div class="hero-content">
+        <h1 class="page-title">STEP INTO THE SPOTLIGHT</h1>
+        <p class="hero-subtitle">
+          CELEBRATING MOTHERHOOD &amp; EMPOWERMENT — AUDITIONS NOW OPEN FOR
+          SEASON 5
+        </p>
+      </div>
+    </header>
+
+    <!-- MAIN REGISTRATION CONTENT -->
+    <main class="join-container">
+      <section class="join-form-section">
+        <div class="form-glass-card">
+          <div class="form-header">
+            <h2>AUDITION REGISTRATION</h2>
+            <p>
+              Fill out your details below to secure your audition slot across
+              various locations.
+            </p>
+          </div>
+
+          <form
+            class="participant-form"
+            action="#"
+            method="POST"
+            onsubmit="event.preventDefault()"
+          >
+            <div class="form-row">
+              <div class="form-group">
+                <label for="full-name">FULL NAME</label>
+                <input
+                  type="text"
+                  id="full-name"
+                  name="fullName"
+                  placeholder="Enter your full name"
+                  required
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="email">EMAIL ADDRESS</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="name@example.com"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="phone">PHONE / WHATSAPP NUMBER</label>
+                <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  placeholder="+91 XXXXX XXXXX"
+                  required
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="city">PREFERRED AUDITION CITY</label>
+                <select id="city" name="city" required>
+                  <option value="" disabled selected>Select city</option>
+                  <option value="Kolkata">Kolkata</option>
+                  <option value="Durgapur">Durgapur</option>
+                  <option value="Siliguri">Siliguri</option>
+                  <option value="Bangalore">Bangalore</option>
+                  <option value="Online">Other / Online Audition</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="age">AGE</label>
+                <input
+                  type="number"
+                  id="age"
+                  name="age"
+                  min="18"
+                  max="99"
+                  placeholder="e.g. 28"
+                  required
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="occupation">OCCUPATION / PROFESSION</label>
+                <input
+                  type="text"
+                  id="occupation"
+                  name="occupation"
+                  placeholder="e.g. Entrepreneur, Teacher, Homemaker"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="social-link"
+                >INSTAGRAM / SOCIAL MEDIA LINK (OPTIONAL)</label
+              >
+              <input
+                type="url"
+                id="social-link"
+                name="socialLink"
+                placeholder="https://instagram.com/yourprofile"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="motivation">YOUR STORY / MOTIVATION TO JOIN</label>
+              <textarea
+                id="motivation"
+                name="motivation"
+                rows="4"
+                placeholder="Share a short summary of your journey and what Matrimaa means to you..."
+              ></textarea>
+            </div>
+
+            <div class="form-submit-wrapper">
+              <button type="submit" class="spl-btn-submit">
+                REGISTER FOR AUDITIONS
+              </button>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER & SPONSORS SECTION -->
+    <footer id="footer-section">
+      <div class="sponsors-header">
+        <h2>S P O N S O R S &nbsp;&amp;&nbsp; P A R T N E R S</h2>
+      </div>
+
+      <!-- Main Footer Grid -->
+      <div class="footer-container">
+        <!-- Column 1: Brand -->
+        <div class="footer-col brand-col">
+          <p class="footer-tagline">
+            Honoring Motherhood — From Regional to Global Recognition.
+          </p>
+
+          <div class="social-links">
+            <a href="#" aria-label="Instagram">📷</a>
+            <a href="#" aria-label="Facebook">f</a>
+            <a href="#" aria-label="YouTube">▶</a>
+          </div>
+        </div>
+
+        <!-- Column 2: Contact -->
+        <div class="footer-col contact-col">
+          <h4>C O N T A C T</h4>
+
+          <ul class="contact-list">
+            <li><span class="icon">📞</span> +91 9147712795</li>
+            <li><span class="icon">📍</span> Kolkata: BIA, Chinar Park</li>
+            <li><span class="icon">🌐</span> www.groomingdestination.com</li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Registration CTA -->
+        <div class="footer-col cta-col">
+          <h4>B E G I N &nbsp; Y O U R &nbsp; J O U R N E Y</h4>
+
+          <p>
+            Auditions open across Kolkata, Durgapur, Siliguri &amp; Bangalore
+            for Season 5.
+          </p>
+
+          <button type="button" class="footer-btn">REGISTER NOW</button>
+        </div>
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="footer-bottom">
+        <hr class="footer-divider" />
+
+        <p>
+          © 2026 MATRIMAA. All rights reserved. Crafted in honor of every
+          mother's story.
+        </p>
+      </div>
+    </footer>
+
+    <script>
+      const navbar = document.querySelector("#navbar");
+
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 20) {
+          navbar.classList.add("scrolled");
+        } else {
+          navbar.classList.remove("scrolled");
+        }
+      });
+    </script>
+  </body>
+</html>
