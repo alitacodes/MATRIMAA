@@ -34,50 +34,42 @@
         </div>
       </div>
 
-      <img
-        src="Flower.png"
-        class="bg-flower flower-left"
-        alt="Decorative Flower"
-      />
+      <div class="hero-container">
+        <div class="hero-left">
+          <img
+            src="matrimaaLogo.png"
+            class="hero-main-logo"
+            alt="Matrimaa Logo"
+          />
+          <h2 class="hero-tagline">
+            A tribute to our <span class="highlight-red">origin.</span>
+          </h2>
+          <div class="hero-cta">
+            <button type="button" class="spl-btn-journey">
+              START YOUR JOURNEY
+            </button>
+          </div>
+        </div>
 
-      <img
-        src="Flower.png"
-        class="bg-flower flower-right"
-        alt="Decorative Flower"
-      />
-
-      <!-- Single Petals -->
-      <img src="single-petal.png" class="bg-petal petal-bl-1" alt="Petal" />
-      <img src="single-petal.png" class="bg-petal petal-bl-2" alt="Petal" />
-      <img src="single-petal.png" class="bg-petal petal-tr-1" alt="Petal" />
-      <img src="single-petal.png" class="bg-petal petal-tr-2" alt="Petal" />
-
-      <div id="body-txt">
-        <h1>A TRIBUTE TO</h1>
-        <h1>OUR ORIGIN</h1>
-      </div>
-
-      <div class="crown-float-wrapper">
-        <img src="big-crown.png" class="big-crown-img" alt="" />
-      </div>
-
-      <img src="Ellipse 9.png" class="podium-shadow" alt="" />
-
-      <div class="spl-btn-2">
-        <button type="button">START YOUR JOURNEY</button>
+        <div class="hero-right">
+          <div class="pink-circle"></div>
+          <img
+            src="big-crown.png"
+            class="hero-crown-img"
+            alt="Matrimaa Crown"
+          />
+        </div>
       </div>
     </div>
 
-    <!-- Red Spotlight Background Section -->
     <div id="red-bg">
-      <!-- Glassmorphic Cards -->
       <div class="card card-top-left">
         <h4>STARTED</h4>
         <h2>2022</h2>
       </div>
 
       <div class="card card-top-right">
-        <h4>MENTOR</h4>
+        <h4>DIRECTOR</h4>
         <h2>TUHINAA PANDEY</h2>
       </div>
 
@@ -94,18 +86,15 @@
         <h2>KOLKATA</h2>
       </div>
 
-      <!-- Center Silhouette & Crown Container -->
       <div class="model-wrapper">
-        <img src="small-crown.png" class="head-crown" alt="Crown" />
         <img
-          src="woman-silhoutte.png"
+          src="mother.png"
           class="model-img"
-          alt="Model Silhouette"
+          alt="Mother"
         />
       </div>
     </div>
 
-    <!-- Dark Stats Section -->
     <div id="stats-section">
       <div class="stats-container">
         <div class="stat-item">
@@ -127,7 +116,6 @@
       <p class="stats-tagline">CELEBRATING WOMEN, CREATING IMPACT</p>
     </div>
 
-    <!-- Media Gallery Section -->
     <section id="gallery-section">
       <div class="gallery-header">
         <h2><span>Media Gallery</span></h2>
@@ -135,7 +123,6 @@
 
       <div class="marquee-container">
         <div class="marquee-track">
-          <!-- First Set of Cards -->
           <div class="gallery-card">
             <img src="image-1.png" alt="Felicitation Ceremony" />
           </div>
@@ -160,7 +147,6 @@
             <img src="image-6.png" alt="Grand Jury Panel" />
           </div>
 
-          <!-- Duplicate Set for Continuous Loop -->
           <div class="gallery-card">
             <img src="image-1.png" alt="Felicitation Ceremony" />
           </div>
@@ -190,15 +176,14 @@
 
     <footer id="footer-section">
       <div class="footer-container">
-        <!-- Column 1: Logo & Socials -->
         <div class="footer-col brand-col">
           <p class="footer-tagline">
             Honoring Motherhood — From Regional to Global Recognition.
           </p>
 
           <div class="social-links">
-            <a href="#" aria-label="Instagram"
-              ><svg
+            <a href="#" aria-label="Instagram">
+              <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 640 640"
                 width="35"
@@ -211,8 +196,8 @@
               </svg>
             </a>
 
-            <a href="#" aria-label="Facebook"
-              ><svg
+            <a href="#" aria-label="Facebook">
+              <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 640 640"
                 width="33"
@@ -224,8 +209,9 @@
                 />
               </svg>
             </a>
-            <a href="#" aria-label="mail"
-              ><svg
+
+            <a href="#" aria-label="mail">
+              <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 640 640"
                 width="34"
@@ -240,10 +226,8 @@
           </div>
         </div>
 
-        <!-- Column 2: Contact Info -->
         <div class="footer-col contact-col">
           <h4>C O N T A C T</h4>
-
           <ul class="contact-list">
             <li><span class="icon">📞</span> +91 9147712795</li>
             <li><span class="icon">📍</span> Kolkata: BIA, Chinar Park</li>
@@ -251,15 +235,12 @@
           </ul>
         </div>
 
-        <!-- Column 3: Registration CTA -->
         <div class="footer-col cta-col">
           <h4>B E G I N &nbsp; Y O U R &nbsp; J O U R N E Y</h4>
-
           <p>
             Auditions open across Kolkata, Durgapur, Siliguri &amp; Bangalore
             for Season 6.
           </p>
-
           <button type="button" class="footer-btn">REGISTER NOW</button>
         </div>
       </div>
@@ -274,20 +255,12 @@
     </footer>
 
     <script>
-      const headCrown = document.querySelector(".head-crown");
       const navbar = document.querySelector("#navbar");
-      let isCrowned = false;
-
       window.addEventListener("scroll", () => {
         if (window.scrollY > 20) {
           navbar.classList.add("scrolled");
         } else {
           navbar.classList.remove("scrolled");
-        }
-
-        if (!isCrowned && window.scrollY > 280) {
-          headCrown.classList.add("is-crowned");
-          isCrowned = true;
         }
       });
     </script>
