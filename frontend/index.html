@@ -87,11 +87,8 @@
       </div>
 
       <div class="model-wrapper">
-        <img
-          src="mother.png"
-          class="model-img"
-          alt="Mother"
-        />
+        <img src="mother.png" class="model-img" alt="Mother" />
+        <img src="small-crown.png" class="mother-crown" alt="Crown" />
       </div>
     </div>
 
@@ -108,7 +105,7 @@
         </div>
 
         <div class="stat-item">
-          <h2>20+</h2>
+          <h2>10+</h2>
           <p>PARTNERS</p>
         </div>
       </div>
@@ -117,10 +114,6 @@
     </div>
 
     <section id="gallery-section">
-      <div class="gallery-header">
-        <h2><span>Media Gallery</span></h2>
-      </div>
-
       <div class="marquee-container">
         <div class="marquee-track">
           <div class="gallery-card">
@@ -177,6 +170,9 @@
     <footer id="footer-section">
       <div class="footer-container">
         <div class="footer-col brand-col">
+          <div class="footer-logo">
+            <img src="matrimaaLogo.png" alt="matrimaa logo" />
+          </div>
           <p class="footer-tagline">
             Honoring Motherhood — From Regional to Global Recognition.
           </p>
@@ -263,6 +259,25 @@
           navbar.classList.remove("scrolled");
         }
       });
+
+      // Crown Fade-in Observer
+      const redBg = document.querySelector("#red-bg");
+      const crown = document.querySelector(".mother-crown");
+
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              crown.classList.add("visible");
+            }
+          });
+        },
+        { threshold: 0.3 },
+      );
+
+      if (redBg) {
+        observer.observe(redBg);
+      }
     </script>
   </body>
 </html>
