@@ -1,9 +1,3 @@
-/* ==========================================
-   JOIN US PAGE STYLES (join-us.css)
-   Transparent Glassmorphic White & Pink Theme
-   ========================================== */
-
-/* Page Setup */
 body.join-body {
   background-color: #ffffff00;
   color: #f59ba2;
@@ -13,10 +7,10 @@ body.join-body {
   padding: 0;
 }
 
-/* Nav Active Link Indicator */
+#nav-buttons button,
+#nav-buttons a,
 #nav-buttons .nav-active {
-  color: #f59ba2;
-  font-weight: 700;
+  text-decoration: none;
 }
 
 /* Hero Section Styling */

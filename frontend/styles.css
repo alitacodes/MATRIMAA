@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 /* Main Hero Setup - Pure White Background */
 #main-bg {
   position: relative;
@@ -59,6 +63,12 @@
 #nav-buttons {
   display: flex;
   gap: 8px;
+}
+
+#nav-buttons a,
+.hero-cta a,
+.footer-col a {
+  text-decoration: none;
 }
 
 #nav-buttons button {
@@ -135,6 +145,8 @@
   width: 600px;
   max-width: 100%;
   height: auto;
+  display: block;
+  object-fit: contain;
   transform: translateX(-11%);
 }
 
@@ -591,7 +603,7 @@
 }
 
 .footer-logo img {
-  width: 148px; 
+  width: 148px;
   height: auto;
   display: block;
 }
