@@ -215,7 +215,7 @@ body {
 .hero {
   position: relative;
 
-  padding: 160px 8% 50px;
+  padding: 70px 8% 50px;
 
   display: flex;
 
@@ -233,7 +233,7 @@ body {
 }
 
 .hero-logo-container {
-  margin-bottom: 15px;
+  margin-bottom: 25px;
 }
 
 .matrimaa-logo {
@@ -244,6 +244,12 @@ body {
   object-fit: contain;
 
   filter: drop-shadow(0 4px 12px rgba(237, 27, 36, 0.25));
+}
+
+.hero-logo-container .matrimaa-logo{
+  width: 240px;
+
+  max-width: none;
 }
 
 .hero-tag {
