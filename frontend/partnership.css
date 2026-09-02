@@ -1,8 +1,7 @@
-/* ==========================================
-   PARTNERSHIP PAGE STYLES (partnership.css)
-   ========================================== */
+html {
+  scroll-behavior: smooth;
+}
 
-/* Page Setup */
 body.partnership-body {
   background-color: #000000;
   color: #ffffff;
@@ -12,45 +11,51 @@ body.partnership-body {
   padding: 0;
 }
 
-/* Hero Section Styling */
+/* Hero Section */
 #partnership-hero {
   position: relative;
-  min-height: 85vh;
+  min-height: 70vh;
   width: 100%;
-  background-image: url("bg-2.png");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  background-color: #ffffff;
+  background-image: none;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
   align-items: center;
-  padding: 180px 40px 140px;
-  text-align: center;
+  justify-content: center;
+  padding: 80px 60px 20px;
   box-sizing: border-box;
 }
 
-#partnership-hero .hero-content {
+.hero-container {
+  width: 100%;
+  max-width: 1300px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
   position: relative;
   z-index: 2;
-  width: 100%;
-  max-width: 1000px;
-  padding: 110px 0;
+}
+
+/* Left Hero Content */
+.hero-left {
+  flex: 1;
+  max-width: 500px;
+  text-align: left;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
+  margin-top: -50px;
 }
 
 .page-title {
-  font-size: 48px;
-  line-height: 1.2;
+  font-size: 50px;
+  line-height: 1.10;
   font-family: "Zalando Sans", sans-serif;
   color: #000000;
-  margin-top: 10px;
   letter-spacing: 2px;
   font-weight: 800;
   text-transform: uppercase;
+  margin: 0 0 10px 0;
 }
 
 .hero-subtitle {
@@ -58,146 +63,162 @@ body.partnership-body {
   font-weight: 600;
   color: #f59ba2;
   letter-spacing: 2.5px;
-  margin-top: 18px;
-  max-width: 750px;
+  line-height: 1.2;
   text-transform: uppercase;
+  margin: 0;
+  position: relative;
+  padding-bottom: 15px;
 }
 
-/* Decorative Flowers */
-.bg-flower {
-  position: absolute;
-  z-index: 1;
-  pointer-events: none;
-  opacity: 0.85;
+/* Pink line under the subheading */
+.hero-subtitle::after {
+  content: "";
+  display: block;
+  width: 260px;
+  height: 3px;
+  background-color: #010000;
+  margin-top: 15px;
+  border-radius: 2px;
 }
 
-.flower-left {
-  top: 41%;
-  left: 32%;
-  width: 75px;
+/* Hero Right Canvas */
+.hero-right {
+  flex: 1.2;
+  position: relative;
+  height: 500px;
+  width: 100%;
+  max-width: 700px;
+  margin-top: -30px;
 }
 
-.flower-right {
-  top: 49%;
-  right: 32%;
-  width: 75px;
-}
-
-/* Ellipse Sponsors Layout */
-.ellipse-sponsors-wrapper {
-  position: absolute;
-  top: 0;
-  left: 0;
+.floating-sponsors-container {
+  position: relative;
   width: 100%;
   height: 100%;
+}
+
+/* Circular Sponsor Container */
+.circular-sponsor {
+  position: absolute;
+  border-radius: 50%;
+  background: #ffffff;
+  border: none;
+  outline: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 0;
+  box-sizing: border-box;
+  cursor: grab;
+  user-select: none;
+  touch-action: none;
+  animation: floatRandom 4s ease-in-out infinite alternate;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.circular-sponsor.dragging {
+  cursor: grabbing;
+  transform: scale(1.15);
+  opacity: 0.95;
+}
+
+.circular-sponsor img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
   pointer-events: none;
 }
 
-.ellipse-sponsor {
-  position: absolute;
-  pointer-events: auto;
-  transform: translate(-50%, -50%);
-  background: rgba(255, 255, 255, 0.92);
-  border: 1.5px solid rgba(230, 0, 18, 0.35);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  padding: 14px 20px;
-  border-radius: 18px;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
-  font-size: 13px;
-  font-weight: 700;
-  color: #111111;
-  white-space: nowrap;
-  letter-spacing: 0.5px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  min-width: 120px;
-  transition:
-    transform 0.3s ease,
-    border-color 0.3s ease,
-    box-shadow 0.3s ease;
+.circular-sponsor:hover {
+  transform: scale(1.15);
+  z-index: 20;
 }
 
-.ellipse-sponsor img.sponsor-logo {
-  height: 70px;
-  width: auto;
-  max-width: 140px;
-  object-fit: contain;
-  border-radius: 6px;
-  flex-shrink: 0;
+/* Floating Motion Animation */
+@keyframes floatRandom {
+  0% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(-15px);
+  }
 }
 
-.sponsor-logo-placeholder {
-  width: 70px;
-  height: 70px;
-  border-radius: 8px;
-  background: rgba(245, 155, 162, 0.15);
-  border: 1px dashed #f59ba2;
-  display: inline-block;
-  flex-shrink: 0;
-}
+/* Sponsor Positions matching reference image */
+.sp-1 {
+  width: 120px;
+  height: 120px;
+  top: 0%;
+  left: 75%;
+  animation-delay: 0s;
+} /* IIHM */
+.sp-2 {
+  width: 105px;
+  height: 105px;
+  top: 5%;
+  left: 25%;
+  animation-delay: 0.6s;
+} /* Kolkatanama */
+.sp-3 {
+  width: 135px;
+  height: 135px;
+  top: 2%;
+  left: -15%;
+  animation-delay: 1.2s;
+} /* Skin Bee */
+.sp-4 {
+  width: 115px;
+  height: 115px;
+  top: 25%;
+  left: 48%;
+  animation-delay: 1.8s;
+} /* Addya Foods */
+.sp-5 {
+  width: 120px;
+  height: 120px;
+  top: 80%;
+  left: 70%;
+  animation-delay: 0.8s;
+} /* Tani's */
+.sp-6 {
+  width: 105px;
+  height: 105px;
+  top: 69%;
+  left: 35%;
+  animation-delay: 2.2s;
+} /* Debdipa's */
+.sp-7 {
+  width: 115px;
+  height: 115px;
+  top: 80%;
+  left: -10%;
+  animation-delay: 1.4s;
+} /* Tandra's */
+.sp-8 {
+  width: 130px;
+  height: 130px;
+  top: 39%;
+  left: 12%;
+  animation-delay: 0.4s;
+} /* Decohome */
+.sp-9 {
+  width: 105px;
+  height: 105px;
+  top: 45%;
+  left: 88%;
+  animation-delay: 1.6s;
+} /* Grooming Destination */
 
-.ellipse-sponsor:hover {
-  transform: translate(-50%, -50%) scale(1.08);
-  border-color: #e60012;
-  box-shadow: 0 8px 22px rgba(230, 0, 18, 0.2);
-}
-
-/* Ellipse Coordinates for 10 Sponsors */
-.ellipse-sponsor.sp-1 {
-  top: 10%;
-  left: 8%;
-} /* Top Left Far */
-.ellipse-sponsor.sp-2 {
-  top: -8%;
-  left: 28%;
-} /* Top Mid Left */
-.ellipse-sponsor.sp-3 {
-  top: -18%;
-  left: 50%;
-} /* Top Center */
-.ellipse-sponsor.sp-4 {
-  top: -8%;
-  left: 72%;
-} /* Top Mid Right */
-.ellipse-sponsor.sp-5 {
-  top: 10%;
-  left: 92%;
-} /* Top Right Far */
-
-.ellipse-sponsor.sp-6 {
-  top: 90%;
-  left: 92%;
-} /* Bottom Right Far */
-.ellipse-sponsor.sp-7 {
-  top: 108%;
-  left: 72%;
-} /* Bottom Mid Right */
-.ellipse-sponsor.sp-8 {
-  top: 118%;
-  left: 50%;
-} /* Bottom Center */
-.ellipse-sponsor.sp-9 {
-  top: 108%;
-  left: 28%;
-} /* Bottom Mid Left */
-.ellipse-sponsor.sp-10 {
-  top: 90%;
-  left: 8%;
-} /* Bottom Left Far */
-
-/* Main Container */
+/* Main Container & Benefits */
 .partnership-container {
   width: 90%;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 80px 0 100px;
+  padding: 60px 0 100px;
 }
 
-/* Benefits Section */
 .section-title-wrapper {
   text-align: center;
   margin-bottom: 50px;
@@ -280,7 +301,7 @@ body.partnership-body {
   color: rgba(255, 255, 255, 0.75);
 }
 
-/* Glassmorphic Form Container */
+/* Form Styling */
 .partner-form-section {
   width: 100%;
   display: flex;
@@ -318,7 +339,6 @@ body.partnership-body {
   margin: 0;
 }
 
-/* Form Layout & Elements */
 .partner-form {
   display: flex;
   flex-direction: column;
@@ -387,7 +407,6 @@ body.partnership-body {
   background: rgba(0, 0, 0, 0.6);
 }
 
-/* Submit Button */
 .form-submit-wrapper {
   text-align: center;
   margin-top: 15px;
@@ -407,9 +426,8 @@ body.partnership-body {
   background-position: 0% 0%;
   color: #000000;
   font-size: 15px;
-  font-weight: 700;
+  font-weight: 500;
   font-family: "Zalando Sans", sans-serif;
-  letter-spacing: 1.5px;
   padding: 15px 45px;
   border-radius: 50px;
   cursor: pointer;
@@ -426,36 +444,38 @@ body.partnership-body {
   box-shadow: 0 10px 25px rgba(237, 27, 36, 0.45);
 }
 
-/* Responsive Styles */
-@media screen and (max-width: 900px) {
+/* Responsiveness */
+@media screen and (max-width: 992px) {
+  .hero-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-left {
+    max-width: 100%;
+    text-align: center;
+    margin-top: 0;
+  }
+
+  .hero-right {
+    height: 480px;
+    margin-top: 0;
+  }
+
   .benefits-grid {
     grid-template-columns: 1fr;
-  }
-
-  .ellipse-sponsors-wrapper {
-    display: flex;
-    flex-wrap: wrap;
-    position: relative;
-    justify-content: center;
-    gap: 12px;
-    margin-bottom: 20px;
-  }
-
-  .ellipse-sponsor {
-    position: static !important;
-    transform: none !important;
   }
 }
 
 @media screen and (max-width: 768px) {
   .page-title {
-    font-size: 32px;
+    font-size: 36px;
   }
 
   #partnership-hero {
     min-height: auto;
-    padding-top: 140px;
-    padding-bottom: 60px;
+    padding-top: 100px;
+    padding-bottom: 40px;
   }
 
   .form-row {
@@ -464,10 +484,5 @@ body.partnership-body {
 
   .form-glass-card {
     padding: 30px 20px;
-  }
-
-  .flower-left,
-  .flower-right {
-    display: none;
   }
 }

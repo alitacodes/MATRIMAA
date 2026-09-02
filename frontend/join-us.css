@@ -13,35 +13,6 @@ body.join-body {
   text-decoration: none;
 }
 
-/* Hero Section Styling */
-#join-hero {
-  position: relative;
-  min-height: 45vh;
-  width: 100%;
-  background-image: url("bg-2.png");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 160px 40px 60px;
-  text-align: center;
-  box-sizing: border-box;
-}
-
-#join-hero .hero-content {
-  position: relative;
-  z-index: 2;
-  width: 100%;
-  max-width: 900px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
 .page-title {
   font-size: 46px;
   line-height: 1.2;
@@ -53,61 +24,11 @@ body.join-body {
   text-transform: uppercase;
 }
 
-.hero-subtitle {
-  font-size: 15px;
-  font-weight: 600;
-  color: #f59ba2;
-  letter-spacing: 2.5px;
-  margin-top: 18px;
-  max-width: 750px;
-  text-transform: uppercase;
-}
-
-/* Decorative Flowers & Petals */
-.bg-flower {
-  position: absolute;
-  z-index: 1;
-  pointer-events: none;
-  opacity: 0.85;
-}
-
-.flower-left {
-  top: 35%;
-  left: 10%;
-  width: 75px;
-}
-
-.flower-right {
-  top: 35%;
-  right: 10%;
-  width: 75px;
-}
-
-.bg-petal {
-  position: absolute;
-  z-index: 1;
-  pointer-events: none;
-  width: 35px;
-  opacity: 0.6;
-}
-
-.petal-bl-1 {
-  bottom: 10%;
-  left: 18%;
-  transform: rotate(-25deg);
-}
-
-.petal-tr-1 {
-  top: 20%;
-  right: 18%;
-  transform: rotate(30deg);
-}
-
 /* Main Container */
 .join-container {
   width: 90%;
   max-width: 1000px;
-  margin: 0 auto;
+  margin: 80px auto;
   padding: 40px 0 100px;
 }
 
@@ -251,9 +172,8 @@ body.join-body {
   background-position: 0% 0%;
   color: #000000;
   font-size: 15px;
-  font-weight: 600;
+  font-weight: 500;
   font-family: "Zalando Sans", sans-serif;
-  letter-spacing: 1.5px;
   padding: 16px 48px;
   border-radius: 50px;
   cursor: pointer;
@@ -276,21 +196,11 @@ body.join-body {
     font-size: 32px;
   }
 
-  #join-hero {
-    padding-top: 130px;
-    padding-bottom: 40px;
-  }
-
   .form-row {
     grid-template-columns: 1fr;
   }
 
   .form-glass-card {
     padding: 30px 20px;
-  }
-
-  .flower-left,
-  .flower-right {
-    display: none;
   }
 }
