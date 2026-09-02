@@ -3,171 +3,170 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Join Us | Matrimaa Season 5</title>
+
+    <!-- Stylesheets -->
     <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="join-us.css" />
+
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Zalando+Sans:ital,wght@0,200..900;1,200..900&display=swap"
       rel="stylesheet"
     />
-    <title>Matrimaa</title>
   </head>
+  <body class="join-body">
+    <!-- NAVBAR -->
+    <div id="navbar">
+      <a href="index.html">
+        <img src="matrimaa-logo.png" alt="Matrimaa Logo" />
+      </a>
 
-  <body>
-    <div id="main-bg">
-      <div id="navbar">
-        <a href="index.html">
-          <img src="matrimaa-logo.png" alt="Matrimaa Logo" />
+      <div id="nav-buttons">
+        <a href="index.html"><button type="button">HOME</button></a>
+        <a href="index.html#stats-section"
+          ><button type="button">JOURNEY</button></a
+        >
+        <a href="index.html#gallery-section"
+          ><button type="button">GALLERY</button></a
+        >
+        <a href="index.html#red-bg"><button type="button">ABOUT US</button></a>
+        <a href="join-us.html"><button type="button">JOIN US</button></a>
+      </div>
+
+      <div class="spl-btn">
+        <a href="partnership.html">
+          <button type="button">PARTNER WITH US</button>
         </a>
-
-        <div id="nav-buttons">
-          <button type="button">HOME</button>
-          <button type="button">JOURNEY</button>
-          <a href="#gallery-section"><button type="button">GALLERY</button></a>
-          <button type="button">ABOUT US</button>
-          <a href="join-us.html"><button type="button">JOIN US</button></a>
-        </div>
-
-        <div class="spl-btn">
-          <a href="partnership.html">
-            <button type="button">PARTNER WITH US</button>
-          </a>
-        </div>
       </div>
+    </div>
 
-      <div class="hero-container">
-        <div class="hero-left">
-          <video class="hero-main-logo" autoplay loop muted playsinline>
-            <source src="Matrimaa-video.mp4" type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
-          <h2 class="hero-tagline">
-            A tribute to our <span class="highlight-red">origin.</span>
-          </h2>
-          <div class="hero-cta">
-            <a href="join-us.html">
-              <button type="button" class="spl-btn-journey">
-                START YOUR JOURNEY
+    <!-- MAIN REGISTRATION CONTENT -->
+    <main class="join-container">
+      <section class="join-form-section">
+        <div class="form-glass-card">
+          <div class="form-header">
+            <h2>AUDITION REGISTRATION</h2>
+            <p>
+              Fill out your details below to secure your audition slot across
+              various locations.
+            </p>
+          </div>
+
+          <form
+            class="participant-form"
+            action="#"
+            method="POST"
+            onsubmit="event.preventDefault()"
+          >
+            <div class="form-row">
+              <div class="form-group">
+                <label for="full-name">FULL NAME</label>
+                <input
+                  type="text"
+                  id="full-name"
+                  name="fullName"
+                  placeholder="Enter your full name"
+                  required
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="email">EMAIL ADDRESS</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="name@example.com"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="phone">PHONE / WHATSAPP NUMBER</label>
+                <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  placeholder="+91 XXXXX XXXXX"
+                  required
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="city">PREFERRED AUDITION CITY</label>
+                <select id="city" name="city" required>
+                  <option value="" disabled selected>Select city</option>
+                  <option value="Kolkata">Kolkata</option>
+                  <option value="Durgapur">Durgapur</option>
+                  <option value="Siliguri">Siliguri</option>
+                  <option value="Bangalore">Bangalore</option>
+                  <option value="Online">Other / Online Audition</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="age">AGE</label>
+                <input
+                  type="number"
+                  id="age"
+                  name="age"
+                  min="18"
+                  max="99"
+                  placeholder="e.g. 28"
+                  required
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="occupation">OCCUPATION / PROFESSION</label>
+                <input
+                  type="text"
+                  id="occupation"
+                  name="occupation"
+                  placeholder="e.g. Entrepreneur, Teacher, Homemaker"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="social-link"
+                >INSTAGRAM / SOCIAL MEDIA LINK (OPTIONAL)</label
+              >
+              <input
+                type="url"
+                id="social-link"
+                name="socialLink"
+                placeholder="https://instagram.com/yourprofile"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="motivation">YOUR STORY / MOTIVATION TO JOIN</label>
+              <textarea
+                id="motivation"
+                name="motivation"
+                rows="4"
+                placeholder="Share a short summary of your journey and what Matrimaa means to you..."
+              ></textarea>
+            </div>
+
+            <div class="form-submit-wrapper">
+              <button type="submit" class="spl-btn-submit">
+                REGISTER FOR AUDITIONS
               </button>
-            </a>
-          </div>
+            </div>
+          </form>
         </div>
-
-        <div class="hero-right">
-          <div class="pink-circle"></div>
-          <img
-            src="big-crown.png"
-            class="hero-crown-img"
-            alt="Matrimaa Crown"
-          />
-        </div>
-      </div>
-    </div>
-
-    <div id="red-bg">
-      <div class="card card-top-left">
-        <h4>STARTED</h4>
-        <h2>2022</h2>
-      </div>
-
-      <div class="card card-top-right">
-        <h4>DIRECTOR</h4>
-        <h2>TUHINAA PANDEY</h2>
-      </div>
-
-      <div class="card card-bottom-left">
-        <h4>
-          <strong>5 SEASONS</strong><br />
-          OF CELEBRATING<br />
-          MOTHERHOOD
-        </h4>
-      </div>
-
-      <div class="card card-bottom-right">
-        <h4>ORIGIN</h4>
-        <h2>KOLKATA</h2>
-      </div>
-
-      <div class="model-wrapper">
-        <img src="mother.png" class="model-img" alt="Mother" />
-        <img src="small-crown.png" class="mother-crown" alt="Crown" />
-      </div>
-    </div>
-
-    <div id="stats-section">
-      <div class="stats-container">
-        <div class="stat-item">
-          <h2>5+</h2>
-          <p>SEASONS</p>
-        </div>
-
-        <div class="stat-item">
-          <h2>100+</h2>
-          <p>PARTICIPANTS</p>
-        </div>
-
-        <div class="stat-item">
-          <h2>10+</h2>
-          <p>PARTNERS</p>
-        </div>
-      </div>
-
-      <p class="stats-tagline">CELEBRATING WOMEN, CREATING IMPACT</p>
-    </div>
-
-    <section id="gallery-section">
-      <div class="marquee-container">
-        <div class="marquee-track">
-          <div class="gallery-card">
-            <img src="image-1.png" alt="Felicitation Ceremony" />
-          </div>
-
-          <div class="gallery-card">
-            <img src="image-2.png" alt="Stage Honors" />
-          </div>
-
-          <div class="gallery-card">
-            <img src="image-3.png" alt="Coronation Night" />
-          </div>
-
-          <div class="gallery-card">
-            <img src="image-4.png" alt="Special Recognition" />
-          </div>
-
-          <div class="gallery-card">
-            <img src="image-5.png" alt="Cherished Moments" />
-          </div>
-
-          <div class="gallery-card">
-            <img src="image-6.png" alt="Grand Jury Panel" />
-          </div>
-
-          <div class="gallery-card">
-            <img src="image-1.png" alt="Felicitation Ceremony" />
-          </div>
-
-          <div class="gallery-card">
-            <img src="image-2.png" alt="Stage Honors" />
-          </div>
-
-          <div class="gallery-card">
-            <img src="image-3.png" alt="Coronation Night" />
-          </div>
-
-          <div class="gallery-card">
-            <img src="image-4.png" alt="Special Recognition" />
-          </div>
-
-          <div class="gallery-card">
-            <img src="image-5.png" alt="Cherished Moments" />
-          </div>
-
-          <div class="gallery-card">
-            <img src="image-6.png" alt="Grand Jury Panel" />
-          </div>
-        </div>
-      </div>
-    </section>
+      </section>
+    </main>
 
     <!-- FOOTER SECTION -->
     <footer id="footer-section">
@@ -228,7 +227,7 @@
         <div class="footer-col contact-col">
           <h4>C O N T A C T</h4>
           <ul class="contact-list">
-            <li><span class="icon">📞</span> +91 9830006595</li>
+            <li><span class="icon">📞</span> +91 98300 06595</li>
             <li><span class="icon">📍</span> Kolkata: BIA, Chinar Park</li>
             <li>
               <span class="icon">🌐</span>
@@ -266,6 +265,7 @@
 
     <script>
       const navbar = document.querySelector("#navbar");
+
       window.addEventListener("scroll", () => {
         if (window.scrollY > 20) {
           navbar.classList.add("scrolled");
@@ -273,25 +273,6 @@
           navbar.classList.remove("scrolled");
         }
       });
-
-      // Crown Fade-in Observer
-      const redBg = document.querySelector("#red-bg");
-      const crown = document.querySelector(".mother-crown");
-
-      const observer = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              crown.classList.add("visible");
-            }
-          });
-        },
-        { threshold: 0.3 },
-      );
-
-      if (redBg) {
-        observer.observe(redBg);
-      }
     </script>
   </body>
 </html>
