@@ -3,13 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
     <title>Matrimaa | Media Gallery</title>
 
-    <!-- ZALANDO SANS -->
+    <!-- ZALANDO SANS & FONTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-
     <link
       href="https://fonts.googleapis.com/css2?family=Zalando+Sans:ital,wght@0,200..900;1,200..900&display=swap"
       rel="stylesheet"
@@ -20,80 +18,63 @@
 
   <body>
     <!-- =========================================================
-     NAVBAR
-========================================================= -->
-
-    <nav id="navbar">
-      <img src="matrimaa-logo.png" alt="Matrimaa Logo" />
+         NAVBAR
+    ========================================================= -->
+    <div id="navbar">
+      <a href="index.html">
+        <img src="matrimaa-logo.png" alt="Matrimaa Logo" />
+      </a>
 
       <div id="nav-buttons">
-        <button onclick="window.location.href = 'index.html'">HOME</button>
-
-        <button onclick="window.location.href = 'journey.html'">JOURNEY</button>
-
-        <button onclick="window.location.href = 'about.html'">ABOUT US</button>
-
-        <button>JOIN US</button>
+        <a href="index.html"
+          ><button type="button" class="active">HOME</button></a
+        >
+        <a href="journey.html"><button type="button">JOURNEY</button></a>
+        <a href="media.html"><button type="button">GALLERY</button></a>
+        <a href="about.html"><button type="button">ABOUT US</button></a>
+        <a href="join-us.html"><button type="button">JOIN US</button></a>
       </div>
 
       <div class="spl-btn">
-        <button>PARTNER WITH US</button>
+        <a href="partnership.html">
+          <button type="button">PARTNER WITH US</button>
+        </a>
       </div>
-    </nav>
-
+    </div>
     <!-- =========================================================
-     BACKGROUND GLOWS
-========================================================= -->
-
+         BACKGROUND GLOWS
+    ========================================================= -->
     <div class="ambient-glow glow-left"></div>
     <div class="ambient-glow glow-right"></div>
 
     <!-- =========================================================
-     MAIN
-========================================================= -->
-
+         MAIN
+    ========================================================= -->
     <main class="gallery-container">
-      <!-- =====================================================
-         HERO
-    ====================================================== -->
-
+      <!-- HERO SECTION -->
       <section class="gallery-hero">
-        <span class="sub-tag"> CELEBRATING MOTHERHOOD </span>
-
+        <span class="sub-tag">CELEBRATING MOTHERHOOD</span>
         <h1 class="hero-title">MEDIA GALLERY</h1>
-
         <p class="hero-subtitle">
-          A visual journey through five seasons of grace, strength and
+          A visual journey through five seasons of grace, strength, and
           empowerment.
         </p>
 
         <!-- FILTER BUTTONS -->
-
         <div class="filter-wrapper">
           <button class="filter-btn active" data-filter="all">
             ALL SEASONS
           </button>
-
           <button class="filter-btn" data-filter="season5">SEASON 5</button>
-
           <button class="filter-btn" data-filter="season4">SEASON 4</button>
-
           <button class="filter-btn" data-filter="season3">SEASON 3</button>
-
           <button class="filter-btn" data-filter="season2">SEASON 2</button>
-
           <button class="filter-btn" data-filter="season1">SEASON 1</button>
-
-          <!-- PORTFOLIO BUTTON -->
-
           <button class="filter-btn" data-filter="portfolio">PORTFOLIO</button>
         </div>
       </section>
 
-      <!-- =====================================================
-         FEATURED SEASONS
-    ====================================================== -->
-
+      <!-- FEATURED SEASONS CAROUSEL -->
       <section class="stage-section">
         <div class="stage-header">
           <div class="stage-label">FEATURED SEASONS</div>
@@ -111,7 +92,6 @@
           <div class="carousel-3d-viewport">
             <div class="carousel-3d-track" id="carouselTrack">
               <!-- SEASON 1 -->
-
               <div
                 class="glass-card item-3d"
                 data-index="0"
@@ -119,25 +99,18 @@
               >
                 <div class="card-inner">
                   <div class="badge">SEASON 1 • 2022</div>
-
                   <img src="Picture5.jpg" alt="Season 1" />
-
                   <div class="card-content">
                     <h3>The Grand Inception</h3>
-
                     <p>The Journey Began • Kolkata</p>
-
                     <button class="expand-btn" data-season="season1">
-                      VIEW SEASON PHOTOS
-
-                      <span>→</span>
+                      VIEW SEASON PHOTOS <span>→</span>
                     </button>
                   </div>
                 </div>
               </div>
 
               <!-- SEASON 2 -->
-
               <div
                 class="glass-card item-3d"
                 data-index="1"
@@ -145,25 +118,18 @@
               >
                 <div class="card-inner">
                   <div class="badge">SEASON 2 • 2023</div>
-
                   <img src="Picture6.jpg" alt="Season 2" />
-
                   <div class="card-content">
                     <h3>Empowerment Unveiled</h3>
-
                     <p>Expanding the Wings of Talent</p>
-
                     <button class="expand-btn" data-season="season2">
-                      VIEW SEASON PHOTOS
-
-                      <span>→</span>
+                      VIEW SEASON PHOTOS <span>→</span>
                     </button>
                   </div>
                 </div>
               </div>
 
               <!-- SEASON 3 -->
-
               <div
                 class="glass-card item-3d"
                 data-index="2"
@@ -171,25 +137,18 @@
               >
                 <div class="card-inner">
                   <div class="badge">SEASON 3 • 2024</div>
-
                   <img src="Picture7.jpg" alt="Season 3" />
-
                   <div class="card-content">
                     <h3>Grooming & Elegance</h3>
-
                     <p>Masterclasses & Sub-Contests</p>
-
                     <button class="expand-btn" data-season="season3">
-                      VIEW SEASON PHOTOS
-
-                      <span>→</span>
+                      VIEW SEASON PHOTOS <span>→</span>
                     </button>
                   </div>
                 </div>
               </div>
 
               <!-- SEASON 4 -->
-
               <div
                 class="glass-card item-3d"
                 data-index="3"
@@ -197,25 +156,18 @@
               >
                 <div class="card-inner">
                   <div class="badge">SEASON 4 • 2025</div>
-
                   <img src="Picture8.jpg" alt="Season 4" />
-
                   <div class="card-content">
                     <h3>Crown Ceremony</h3>
-
                     <p>ICCR Auditorium, Kolkata</p>
-
                     <button class="expand-btn" data-season="season4">
-                      VIEW SEASON PHOTOS
-
-                      <span>→</span>
+                      VIEW SEASON PHOTOS <span>→</span>
                     </button>
                   </div>
                 </div>
               </div>
 
               <!-- SEASON 5 -->
-
               <div
                 class="glass-card item-3d"
                 data-index="4"
@@ -223,18 +175,12 @@
               >
                 <div class="card-inner">
                   <div class="badge">SEASON 5 • 2026</div>
-
                   <img src="Picture9.jpg" alt="Season 5" />
-
                   <div class="card-content">
                     <h3>The Grand Finale London</h3>
-
                     <p>Sattavis Patidar Centre, Wembley</p>
-
                     <button class="expand-btn" data-season="season5">
-                      VIEW SEASON PHOTOS
-
-                      <span>→</span>
+                      VIEW SEASON PHOTOS <span>→</span>
                     </button>
                   </div>
                 </div>
@@ -251,34 +197,22 @@
           </button>
         </div>
 
-        <!-- ONLY DOTS - NO 01/05 -->
-
         <div class="carousel-dots" id="dotsContainer"></div>
       </section>
 
-      <!-- =====================================================
-         PHOTO GALLERY
-    ====================================================== -->
-
+      <!-- PHOTO GALLERY GRID -->
       <section class="gallery-grid-section" id="photo-grid-anchor">
         <div class="section-topline">MOMENTS THAT MATTER</div>
-
         <h2 class="section-heading" id="grid-title">ALL SEASON HIGHLIGHTS</h2>
 
         <div class="gallery-masonry" id="galleryGrid">
-          <!-- =========================
-                 SEASON 5
-            ========================== -->
-
+          <!-- SEASON 5 -->
           <div class="grid-item season5">
             <div class="masonry-card">
               <img src="Picture5.jpg" alt="London Grand Finale" />
-
               <div class="overlay-info">
-                <span class="category"> SEASON 5 </span>
-
+                <span class="category">SEASON 5</span>
                 <h4>London Mahotsav</h4>
-
                 <p>International Grand Finale • Wembley</p>
               </div>
             </div>
@@ -287,12 +221,9 @@
           <div class="grid-item season5">
             <div class="masonry-card">
               <img src="Picture6.jpg" alt="Season 5 Red Carpet" />
-
               <div class="overlay-info">
-                <span class="category"> SEASON 5 </span>
-
+                <span class="category">SEASON 5</span>
                 <h4>Red Carpet Elegance</h4>
-
                 <p>Global Media & VIP Guests</p>
               </div>
             </div>
@@ -301,12 +232,9 @@
           <div class="grid-item season5">
             <div class="masonry-card">
               <img src="Picture7.jpg" alt="Women Leadership Forum" />
-
               <div class="overlay-info">
-                <span class="category"> SEASON 5 </span>
-
+                <span class="category">SEASON 5</span>
                 <h4>Women Leadership Forum</h4>
-
                 <p>Keynote & Mentorship Sessions</p>
               </div>
             </div>
@@ -315,30 +243,21 @@
           <div class="grid-item season5">
             <div class="masonry-card">
               <img src="Picture8.jpg" alt="Season 5 Gala" />
-
               <div class="overlay-info">
-                <span class="category"> SEASON 5 </span>
-
+                <span class="category">SEASON 5</span>
                 <h4>Gala Evening</h4>
-
                 <p>Celebration & Networking</p>
               </div>
             </div>
           </div>
 
-          <!-- =========================
-                 SEASON 4
-            ========================== -->
-
+          <!-- SEASON 4 -->
           <div class="grid-item season4">
             <div class="masonry-card">
               <img src="Picture9.jpg" alt="Season 4 Jury" />
-
               <div class="overlay-info">
-                <span class="category"> SEASON 4 </span>
-
+                <span class="category">SEASON 4</span>
                 <h4>Jury Felicitations</h4>
-
                 <p>ICCR Auditorium, Kolkata</p>
               </div>
             </div>
@@ -347,12 +266,9 @@
           <div class="grid-item season4">
             <div class="masonry-card">
               <img src="Picture10.jpg" alt="Season 4 Talent Round" />
-
               <div class="overlay-info">
-                <span class="category"> SEASON 4 </span>
-
+                <span class="category">SEASON 4</span>
                 <h4>Talent Showcase</h4>
-
                 <p>Dance & Performing Arts</p>
               </div>
             </div>
@@ -361,44 +277,21 @@
           <div class="grid-item season4">
             <div class="masonry-card">
               <img src="Picture11.jpg" alt="Season 4 Winners" />
-
               <div class="overlay-info">
-                <span class="category"> SEASON 4 </span>
-
+                <span class="category">SEASON 4</span>
                 <h4>Subtitle Winners</h4>
-
                 <p>Grace, Confidence & Recognition</p>
               </div>
             </div>
           </div>
 
-          <div class="grid-item season4">
-            <div class="masonry-card">
-              <img src="Picture12.jpg" alt="Season 4 Press Meet" />
-
-              <div class="overlay-info">
-                <span class="category"> SEASON 4 </span>
-
-                <h4>Press Meet</h4>
-
-                <p>Unveiling the Crown</p>
-              </div>
-            </div>
-          </div>
-
-          <!-- =========================
-                 SEASON 3
-            ========================== -->
-
+          <!-- SEASON 3 -->
           <div class="grid-item season3">
             <div class="masonry-card">
               <img src="Picture13.jpg" alt="Grooming Masterclass" />
-
               <div class="overlay-info">
-                <span class="category"> SEASON 3 </span>
-
+                <span class="category">SEASON 3</span>
                 <h4>Grooming Masterclass</h4>
-
                 <p>Pageant Coaching & Mentorship</p>
               </div>
             </div>
@@ -407,58 +300,21 @@
           <div class="grid-item season3">
             <div class="masonry-card">
               <img src="Picture14.jpg" alt="Styling Workshop" />
-
               <div class="overlay-info">
-                <span class="category"> SEASON 3 </span>
-
+                <span class="category">SEASON 3</span>
                 <h4>Styling & Makeover</h4>
-
                 <p>Celebrity Stylist Workshops</p>
               </div>
             </div>
           </div>
 
-          <div class="grid-item season3">
-            <div class="masonry-card">
-              <img src="Picture6.jpg" alt="Ramp Training" />
-
-              <div class="overlay-info">
-                <span class="category"> SEASON 3 </span>
-
-                <h4>Ramp Training</h4>
-
-                <p>Posture & Stance Perfection</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="grid-item season3">
-            <div class="masonry-card">
-              <img src="Picture7.jpg" alt="Wellness Session" />
-
-              <div class="overlay-info">
-                <span class="category"> SEASON 3 </span>
-
-                <h4>Wellness & Yoga</h4>
-
-                <p>Mind-Body Wellness Sessions</p>
-              </div>
-            </div>
-          </div>
-
-          <!-- =========================
-                 SEASON 2
-            ========================== -->
-
+          <!-- SEASON 2 -->
           <div class="grid-item season2">
             <div class="masonry-card">
               <img src="Picture8.jpg" alt="Culinary Round" />
-
               <div class="overlay-info">
-                <span class="category"> SEASON 2 </span>
-
+                <span class="category">SEASON 2</span>
                 <h4>Culinary Talent Round</h4>
-
                 <p>Celebrating Everyday Talents</p>
               </div>
             </div>
@@ -467,118 +323,33 @@
           <div class="grid-item season2">
             <div class="masonry-card">
               <img src="Picture9.jpg" alt="Traditional Round" />
-
               <div class="overlay-info">
-                <span class="category"> SEASON 2 </span>
-
+                <span class="category">SEASON 2</span>
                 <h4>Ethnic Splendor</h4>
-
                 <p>Celebrating Saree Heritage</p>
               </div>
             </div>
           </div>
 
-          <div class="grid-item season2">
-            <div class="masonry-card">
-              <img src="Picture10.jpg" alt="Outdoor Shoot" />
-
-              <div class="overlay-info">
-                <span class="category"> SEASON 2 </span>
-
-                <h4>Outdoor Fashion Shoot</h4>
-
-                <p>Nature & Beauty Concept</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="grid-item season2">
-            <div class="masonry-card">
-              <img src="Picture11.jpg" alt="Season 2 Auditions" />
-
-              <div class="overlay-info">
-                <span class="category"> SEASON 2 </span>
-
-                <h4>Audition Rounds</h4>
-
-                <p>Empowering Mothers Across Bengal</p>
-              </div>
-            </div>
-          </div>
-
-          <!-- =========================
-                 SEASON 1
-            ========================== -->
-
+          <!-- SEASON 1 -->
           <div class="grid-item season1">
             <div class="masonry-card">
               <img src="Picture12.jpg" alt="First Auditions" />
-
               <div class="overlay-info">
-                <span class="category"> SEASON 1 </span>
-
+                <span class="category">SEASON 1</span>
                 <h4>First Auditions</h4>
-
                 <p>The Beginning of Matrimaa</p>
               </div>
             </div>
           </div>
 
-          <div class="grid-item season1">
-            <div class="masonry-card">
-              <img src="Picture13.jpg" alt="Inaugural Night" />
-
-              <div class="overlay-info">
-                <span class="category"> SEASON 1 </span>
-
-                <h4>Inaugural Ceremony</h4>
-
-                <p>The Spark of Matrimaa Movement</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="grid-item season1">
-            <div class="masonry-card">
-              <img src="Picture14.jpg" alt="First Ramp Walk" />
-
-              <div class="overlay-info">
-                <span class="category"> SEASON 1 </span>
-
-                <h4>Debut Ramp Walk</h4>
-
-                <p>Mothers Stepping onto the Stage</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="grid-item season1">
-            <div class="masonry-card">
-              <img src="Picture6.jpg" alt="Mentor Honours" />
-
-              <div class="overlay-info">
-                <span class="category"> SEASON 1 </span>
-
-                <h4>Mentor Honours</h4>
-
-                <p>Recognizing Vision & Leadership</p>
-              </div>
-            </div>
-          </div>
-
-          <!-- =========================
-                 PORTFOLIO
-            ========================== -->
-
+          <!-- PORTFOLIO -->
           <div class="grid-item portfolio">
             <div class="masonry-card">
               <img src="Picture6.jpg" alt="Matrimaa Portfolio" />
-
               <div class="overlay-info">
-                <span class="category"> PORTFOLIO </span>
-
+                <span class="category">PORTFOLIO</span>
                 <h4>Matrimaa Portfolio</h4>
-
                 <p>Celebrating Confidence & Grace</p>
               </div>
             </div>
@@ -587,27 +358,10 @@
           <div class="grid-item portfolio">
             <div class="masonry-card">
               <img src="Picture11.jpg" alt="Portfolio Portrait" />
-
               <div class="overlay-info">
-                <span class="category"> PORTFOLIO </span>
-
+                <span class="category">PORTFOLIO</span>
                 <h4>Portrait Collection</h4>
-
                 <p>Stories Beyond the Crown</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="grid-item portfolio">
-            <div class="masonry-card">
-              <img src="Picture6.jpg" alt="Portfolio Collection" />
-
-              <div class="overlay-info">
-                <span class="category"> PORTFOLIO </span>
-
-                <h4>Grace in Focus</h4>
-
-                <p>Individual Stories & Expressions</p>
               </div>
             </div>
           </div>
@@ -615,7 +369,9 @@
       </section>
     </main>
 
-    <!-- FOOTER SECTION -->
+    <!-- =========================================================
+         FOOTER
+    ========================================================= -->
     <footer id="footer-section">
       <div class="footer-container">
         <div class="footer-col brand-col">
@@ -655,7 +411,7 @@
               </svg>
             </a>
 
-            <a href="#" aria-label="mail">
+            <a href="#" aria-label="Mail">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 640 640"
@@ -711,65 +467,41 @@
     </footer>
 
     <!-- =========================================================
-     JAVASCRIPT
-========================================================= -->
-
+         JAVASCRIPT
+    ========================================================= -->
     <script>
       document.addEventListener("DOMContentLoaded", function () {
         const track = document.getElementById("carouselTrack");
-
         const cards = Array.from(track.children);
-
         const prevBtn = document.getElementById("prevBtn");
-
         const nextBtn = document.getElementById("nextBtn");
-
         const dotsContainer = document.getElementById("dotsContainer");
-
         const filterBtns = document.querySelectorAll(".filter-btn");
-
         const gridItems = document.querySelectorAll(".grid-item");
-
         const gridTitle = document.getElementById("grid-title");
 
         let currentIndex = 2;
 
-        /* CREATE DOTS */
-
         cards.forEach(function (card, index) {
           const dot = document.createElement("button");
-
           dot.classList.add("dot");
-
           dot.setAttribute("aria-label", "Go to season " + (index + 1));
-
-          if (index === currentIndex) {
-            dot.classList.add("active");
-          }
-
+          if (index === currentIndex) dot.classList.add("active");
           dot.addEventListener("click", function () {
             goToSlide(index);
           });
-
           dotsContainer.appendChild(dot);
         });
 
         const dots = Array.from(dotsContainer.children);
 
-        /* UPDATE CAROUSEL */
-
         function updateCarousel() {
           cards.forEach(function (card, index) {
             card.classList.remove("active");
-
             const offset = index - currentIndex;
-
             const translateX = offset * 320;
-
             const translateZ = -Math.abs(offset) * 120;
-
             const rotateY = offset * -15;
-
             const opacity = Math.max(0.28, 1 - Math.abs(offset) * 0.35);
 
             card.style.transform =
@@ -780,14 +512,10 @@
               "px) rotateY(" +
               rotateY +
               "deg)";
-
             card.style.opacity = opacity;
-
             card.style.zIndex = 100 - Math.abs(offset);
 
-            if (index === currentIndex) {
-              card.classList.add("active");
-            }
+            if (index === currentIndex) card.classList.add("active");
           });
 
           dots.forEach(function (dot, index) {
@@ -795,43 +523,24 @@
           });
         }
 
-        /* GO TO SLIDE */
-
         function goToSlide(index) {
-          if (index < 0) {
-            currentIndex = cards.length - 1;
-          } else if (index >= cards.length) {
-            currentIndex = 0;
-          } else {
-            currentIndex = index;
-          }
-
+          if (index < 0) currentIndex = cards.length - 1;
+          else if (index >= cards.length) currentIndex = 0;
+          else currentIndex = index;
           updateCarousel();
         }
-
-        /* ARROWS */
 
         prevBtn.addEventListener("click", function () {
           goToSlide(currentIndex - 1);
         });
-
         nextBtn.addEventListener("click", function () {
           goToSlide(currentIndex + 1);
         });
 
-        /* KEYBOARD */
-
         document.addEventListener("keydown", function (event) {
-          if (event.key === "ArrowLeft") {
-            goToSlide(currentIndex - 1);
-          }
-
-          if (event.key === "ArrowRight") {
-            goToSlide(currentIndex + 1);
-          }
+          if (event.key === "ArrowLeft") goToSlide(currentIndex - 1);
+          if (event.key === "ArrowRight") goToSlide(currentIndex + 1);
         });
-
-        /* FILTER */
 
         function filterSeason(filterKey) {
           filterBtns.forEach(function (button) {
@@ -847,88 +556,61 @@
             gridTitle.textContent = "PORTFOLIO";
           } else {
             const seasonNumber = filterKey.replace("season", "");
-
             gridTitle.textContent = "SEASON " + seasonNumber + " GALLERY";
           }
 
           gridItems.forEach(function (item) {
             const show =
               filterKey === "all" || item.classList.contains(filterKey);
-
             item.style.display = show ? "block" : "none";
           });
         }
 
-        /* FILTER BUTTONS */
-
         filterBtns.forEach(function (button) {
           button.addEventListener("click", function () {
             const filterValue = this.getAttribute("data-filter");
-
             filterSeason(filterValue);
-
             if (filterValue !== "portfolio") {
               const targetIndex = cards.findIndex(function (card) {
                 return card.getAttribute("data-category") === filterValue;
               });
-
-              if (targetIndex !== -1) {
-                goToSlide(targetIndex);
-              }
+              if (targetIndex !== -1) goToSlide(targetIndex);
             }
-
-            document.getElementById("photo-grid-anchor").scrollIntoView({
-              behavior: "smooth",
-            });
+            document
+              .getElementById("photo-grid-anchor")
+              .scrollIntoView({ behavior: "smooth" });
           });
         });
-
-        /* VIEW SEASON PHOTOS */
 
         document.querySelectorAll(".expand-btn").forEach(function (button) {
           button.addEventListener("click", function (event) {
             event.stopPropagation();
-
             const season = this.getAttribute("data-season");
-
             filterSeason(season);
-
-            document.getElementById("photo-grid-anchor").scrollIntoView({
-              behavior: "smooth",
-            });
+            document
+              .getElementById("photo-grid-anchor")
+              .scrollIntoView({ behavior: "smooth" });
           });
         });
-
-        /* CARD CLICK */
 
         cards.forEach(function (card) {
           card.addEventListener("click", function () {
             const category = this.getAttribute("data-category");
-
             const index = parseInt(this.getAttribute("data-index"));
-
             goToSlide(index);
-
             filterSeason(category);
-
-            document.getElementById("photo-grid-anchor").scrollIntoView({
-              behavior: "smooth",
-            });
+            document
+              .getElementById("photo-grid-anchor")
+              .scrollIntoView({ behavior: "smooth" });
           });
         });
 
-        /* INITIAL STATE */
-
         filterSeason("all");
-
         updateCarousel();
       });
 
-      /* NAVBAR SCROLL */
-
       window.addEventListener("scroll", function () {
         const navbar = document.getElementById("navbar");
-
         if (window.scrollY > 20) {
           navbar.classList.add("scrolled");
         } else {

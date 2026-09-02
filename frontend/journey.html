@@ -19,30 +19,29 @@
   </head>
 
   <body>
-    <!-- =========================================================
-     NAVBAR
-========================================================= -->
-
-    <nav id="navbar">
-      <img src="matrimaa-logo.png" alt="Matrimaa Logo" />
+    <div id="navbar">
+      <a href="index.html">
+        <img src="matrimaa-logo.png" alt="Matrimaa Logo" />
+      </a>
 
       <div id="nav-buttons">
-        <button onclick="window.location.href = 'index.html'">HOME</button>
-
-        <button onclick="window.location.href = 'journey.html'">JOURNEY</button>
-
-        <button onclick="window.location.href = 'about.html'">ABOUT US</button>
-
-        <button>JOIN US</button>
+        <a href="index.html"
+          ><button type="button" class="active">HOME</button></a
+        >
+        <a href="journey.html"><button type="button">JOURNEY</button></a>
+        <a href="media.html"><button type="button">GALLERY</button></a>
+        <a href="about.html"><button type="button">ABOUT US</button></a>
+        <a href="join-us.html"><button type="button">JOIN US</button></a>
       </div>
 
       <div class="spl-btn">
-        <button>PARTNER WITH US</button>
+        <a href="partnership.html">
+          <button type="button">PARTNER WITH US</button>
+        </a>
       </div>
-    </nav>
-
+    </div>
     <!-- =========================================================
-     JOURNEY
+      JOURNEY
 ========================================================= -->
 
     <main class="journey-section">
@@ -51,7 +50,7 @@
       <div class="journey-background" id="journeyBackground"></div>
 
       <!-- =====================================================
-         LEFT CONTENT
+          LEFT CONTENT
     ====================================================== -->
 
       <section class="journey-content">
@@ -71,7 +70,7 @@
       </section>
 
       <!-- =====================================================
-         SEASON NAVIGATION
+          SEASON NAVIGATION
     ====================================================== -->
 
       <section class="season-navigation">
@@ -268,7 +267,7 @@
     </footer>
 
     <!-- =========================================================
-     JAVASCRIPT
+      JAVASCRIPT
 ========================================================= -->
 
     <script>
@@ -385,7 +384,7 @@
         });
 
         /* =====================================================
-       LEFT CONTENT
+        LEFT CONTENT
     ====================================================== */
 
         const activeSeason = seasons[currentIndex];
@@ -399,13 +398,13 @@
         counterCurrent.textContent = activeSeason.number;
 
         /* =====================================================
-       BACKGROUND
+        BACKGROUND
     ====================================================== */
 
         background.style.backgroundImage = `url("${activeSeason.image}")`;
 
         /* =====================================================
-       BUTTON STATES
+        BUTTON STATES
     ====================================================== */
 
         prevButton.disabled = currentIndex === 0;

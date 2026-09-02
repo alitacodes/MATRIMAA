@@ -122,7 +122,8 @@ body {
   transition: 0.25s ease;
 }
 
-#nav-buttons button:hover {
+#nav-buttons button:hover,
+#nav-buttons button.active {
   background: rgba(255, 255, 255, 0.6);
 
   color: #ed1b24;
@@ -249,7 +250,7 @@ body {
   padding: 25px 32px 27px 27px;
 
   /* -----------------------------------------
-       GLASS EFFECT
+        GLASS EFFECT
     ----------------------------------------- */
 
   background: linear-gradient(
@@ -263,7 +264,7 @@ body {
   -webkit-backdrop-filter: blur(18px);
 
   /* -----------------------------------------
-       GLASS BORDER
+        GLASS BORDER
     ----------------------------------------- */
 
   border: 1px solid rgba(255, 255, 255, 0.72);
@@ -273,7 +274,7 @@ body {
   border-radius: 4px 22px 22px 4px;
 
   /* -----------------------------------------
-       SHADOW
+        SHADOW
     ----------------------------------------- */
 
   box-shadow:
@@ -281,7 +282,7 @@ body {
     inset 0 1px 0 rgba(255, 255, 255, 0.7);
 
   /* -----------------------------------------
-       TEXT VISIBILITY
+        TEXT VISIBILITY
     ----------------------------------------- */
 
   color: #2b0d12;
@@ -858,8 +859,14 @@ body {
   letter-spacing: 3px;
 }
 
+/* =========================================================
+   SOCIAL LINKS (WITHOUT OUTLINED CIRCLE BORDER)
+========================================================= */
+
 .social-links {
   display: flex;
+
+  align-items: center;
 
   gap: 15px;
 
@@ -867,15 +874,7 @@ body {
 }
 
 .social-links a {
-  width: 35px;
-
-  height: 35px;
-
-  border: 1px solid #ffffff;
-
-  border-radius: 50%;
-
-  display: flex;
+  display: inline-flex;
 
   align-items: center;
 
@@ -885,9 +884,13 @@ body {
 
   text-decoration: none;
 
-  font-family: "Zalando Sans", sans-serif;
+  transition:
+    color 0.3s ease,
+    transform 0.3s ease;
+}
 
-  font-size: 14px;
+.social-links svg:hover {
+  color: #f59ba2;
 }
 
 .contact-list {
@@ -1105,10 +1108,6 @@ body {
     transform: scale(0.6);
 
     transform-origin: center top;
-  }
-
-  #footer-section {
-    padding: 55px 8% 20px;
   }
 
   .sponsors-header h2 {
