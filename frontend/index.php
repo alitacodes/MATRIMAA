@@ -16,24 +16,24 @@
   <body>
     <div id="main-bg">
       <div id="navbar">
-        <a href="index.html">
+        <a href="index.php">
           <img src="matrimaa-logo.png" alt="Matrimaa Logo" />
         </a>
 
         <div id="nav-buttons">
-          <a href="index.html"
+          <a href="index.php"
             ><button type="button" class="active">HOME</button></a
           >
-          <a href="journey.html"><button type="button">JOURNEY</button></a>
-          <a href="media.html"
+          <a href="journey.php"><button type="button">JOURNEY</button></a>
+          <a href="media.php"
             ><button type="button">GALLERY</button></a
           >
-          <a href="about.html"><button type="button">ABOUT US</button></a>
-          <a href="join-us.html"><button type="button">JOIN US</button></a>
+          <a href="about.php"><button type="button">ABOUT US</button></a>
+          <a href="join-us.php"><button type="button">JOIN US</button></a>
         </div>
 
         <div class="spl-btn">
-          <a href="partnership.html">
+          <a href="partnership.php">
             <button type="button">PARTNER WITH US</button>
           </a>
         </div>
@@ -49,7 +49,7 @@
             A tribute to our <span class="highlight-red">origin.</span>
           </h2>
           <div class="hero-cta">
-            <a href="join-us.html">
+            <a href="join-us.php">
               <button type="button" class="spl-btn-journey">
                 START YOUR JOURNEY
               </button>
@@ -253,7 +253,7 @@
             Auditions open across Kolkata, Durgapur, Siliguri &amp; Bangalore
             for Season 6.
           </p>
-          <a href="join-us.html">
+          <a href="join-us.php">
             <button type="button" class="footer-btn">REGISTER NOW</button>
           </a>
         </div>
