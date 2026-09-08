@@ -58,11 +58,14 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="0" />
   <title>Partner With Us | Matrimaa</title>
 
   <!-- Stylesheets -->
-  <link rel="stylesheet" href="styles.css" />
-  <link rel="stylesheet" href="partnership.css" />
+  <link rel="stylesheet" href="styles.css?v=2.0">
+  <link rel="stylesheet" href="partnership.css?v=2.0">
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -78,15 +81,29 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
       <img src="matrimaa-logo.png" alt="Matrimaa Logo" />
     </a>
 
-    <div id="nav-buttons">
-      <a href="index.php"><button type="button">HOME</button></a>
-      <a href="index.php#stats-section"><button type="button">JOURNEY</button></a>
-      <a href="index.php#gallery-section"><button type="button">GALLERY</button></a>
-      <a href="index.php#red-bg"><button type="button">ABOUT US</button></a>
-      <a href="join-us.php"><button type="button">JOIN US</button></a>
+    <!-- Hamburger Menu Icon -->
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
     </div>
 
-    <div class="spl-btn">
+    <!-- Navigation Buttons -->
+    <div id="nav-buttons">
+      <a href="index.php"><button type="button">HOME</button></a>
+      <a href="journey.php"><button type="button">JOURNEY</button></a>
+      <a href="media.php"><button type="button">GALLERY</button></a>
+      <a href="about.php"><button type="button">ABOUT US</button></a>
+      <a href="join-us.php"><button type="button">JOIN US</button></a>
+      <div class="spl-btn mobile-only">
+        <a href="#partner-form-section">
+          <button type="button">PARTNER WITH US</button>
+        </a>
+      </div>
+    </div>
+
+    <!-- Special Button for Desktop Header -->
+    <div class="spl-btn desktop-only">
       <a href="#partner-form-section">
         <button type="button">PARTNER WITH US</button>
       </a>
@@ -310,14 +327,32 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
   <!-- SCRIPTS -->
   <script>
-    
     <?php if (isset($_GET['status']) && $_GET['status'] === 'success'): ?>
       alert("Form submitted successfully!");
       if (window.history.replaceState) {
         window.history.replaceState(null, null, window.location.pathname);
       }
     <?php endif; ?>
-    
+
+    // Hamburger Menu Toggle
+    const hamburger = document.getElementById("hamburger");
+    const navButtons = document.getElementById("nav-buttons");
+
+    if (hamburger && navButtons) {
+      hamburger.addEventListener("click", () => {
+        hamburger.classList.toggle("active");
+        navButtons.classList.toggle("active");
+      });
+
+      // Close menu when any option inside #nav-buttons is clicked
+      document.querySelectorAll("#nav-buttons a").forEach((link) => {
+        link.addEventListener("click", () => {
+          hamburger.classList.remove("active");
+          navButtons.classList.remove("active");
+        });
+      });
+    }
+
     // Navbar scroll effect
     const navbar = document.querySelector("#navbar");
     window.addEventListener("scroll", () => {
@@ -328,7 +363,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
       }
     });
 
-    // Interactive Drag & Drop Script
+    // Interactive Drag & Drop Script for Sponsors
     document.querySelectorAll(".circular-sponsor").forEach((el) => {
       let isDragging = false;
       let startX, startY, initialLeft, initialTop;

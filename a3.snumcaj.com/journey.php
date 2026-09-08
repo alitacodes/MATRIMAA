@@ -3,6 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
 
     <!-- ZALANDO SANS ONLY -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -24,35 +27,35 @@
         <img src="matrimaa-logo.png" alt="Matrimaa Logo" />
       </a>
 
-      <div id="nav-buttons">
-        <a href="index.php"
-          ><button type="button" class="active">HOME</button></a
-        >
-        <a href="journey.php"><button type="button">JOURNEY</button></a>
-        <a href="media.php"><button type="button">GALLERY</button></a>
-        <a href="about.php"><button type="button">ABOUT US</button></a>
-        <a href="join-us.php"><button type="button">JOIN US</button></a>
+      <div class="hamburger-menu" id="hamburger-btn">
+        <span></span>
+        <span></span>
+        <span></span>
       </div>
 
-      <div class="spl-btn">
-        <a href="partnership.php">
-          <button type="button">PARTNER WITH US</button>
-        </a>
+      <div id="nav-menu">
+        <div id="nav-buttons">
+          <a href="index.php"><button type="button">HOME</button></a>
+          <a href="journey.php"
+            ><button type="button" class="active">JOURNEY</button></a
+          >
+          <a href="media.php"><button type="button">GALLERY</button></a>
+          <a href="about.php"><button type="button">ABOUT US</button></a>
+          <a href="join-us.php"><button type="button">JOIN US</button></a>
+        </div>
+
+        <div class="spl-btn">
+          <a href="partnership.php">
+            <button type="button">PARTNER WITH US</button>
+          </a>
+        </div>
       </div>
     </div>
-    <!-- =========================================================
-      JOURNEY
-========================================================= -->
 
     <main class="journey-section">
       <!-- BACKGROUND -->
 
       <div class="journey-background" id="journeyBackground"></div>
-
-      <!-- =====================================================
-          LEFT CONTENT
-    ====================================================== -->
-
       <section class="journey-content">
         <div class="season-info">
           <p class="season-number">
@@ -68,10 +71,6 @@
           </p>
         </div>
       </section>
-
-      <!-- =====================================================
-          SEASON NAVIGATION
-    ====================================================== -->
 
       <section class="season-navigation">
         <div class="arc-area">
@@ -95,8 +94,6 @@
                     "
             />
           </svg>
-
-          <!-- SEASON CIRCLES -->
 
           <div class="season-list">
             <button class="season-item slot-1">
@@ -140,8 +137,6 @@
             </button>
           </div>
 
-          <!-- CONTROLS -->
-
           <div class="season-controls">
             <button
               id="prevSeason"
@@ -171,7 +166,6 @@
       </section>
     </main>
 
-    <!-- FOOTER SECTION -->
     <footer id="footer-section">
       <div class="footer-container">
         <div class="footer-col brand-col">
@@ -266,10 +260,6 @@
       </div>
     </footer>
 
-    <!-- =========================================================
-      JAVASCRIPT
-========================================================= -->
-
     <script>
       const seasons = [
         {
@@ -319,167 +309,85 @@
       ];
 
       const seasonItems = document.querySelectorAll(".season-item");
-
       const currentSeason = document.getElementById("currentSeason");
-
       const seasonTitle = document.getElementById("seasonTitle");
-
       const seasonDescription = document.getElementById("seasonDescription");
-
       const prevButton = document.getElementById("prevSeason");
-
       const nextButton = document.getElementById("nextSeason");
-
       const counterCurrent = document.getElementById("counterCurrent");
-
       const counterTotal = document.getElementById("counterTotal");
-
       const navbar = document.getElementById("navbar");
-
       const background = document.getElementById("journeyBackground");
 
       const CENTER_SLOT = 2;
-
       let currentIndex = 0;
 
-      /* =========================================================
-   TOTAL
-========================================================= */
-
       counterTotal.textContent = String(seasons.length).padStart(2, "0");
-
-      /* =========================================================
-   RENDER
-========================================================= */
 
       function renderSeasons() {
         seasonItems.forEach((item, slotIndex) => {
           const seasonIndex = currentIndex + (slotIndex - CENTER_SLOT);
 
-          /* HIDE INVALID */
-
           if (seasonIndex < 0 || seasonIndex >= seasons.length) {
             item.style.visibility = "hidden";
-
             return;
           }
 
           item.style.visibility = "visible";
-
           const season = seasons[seasonIndex];
-
           const image = item.querySelector("img");
-
           const label = item.querySelector("span");
 
           image.src = season.image;
-
           image.alt = "Season " + season.number;
-
           label.textContent = "SEASON " + season.number;
-
           item.dataset.seasonIndex = seasonIndex;
-
           item.classList.toggle("active", seasonIndex === currentIndex);
         });
 
-        /* =====================================================
-        LEFT CONTENT
-    ====================================================== */
-
         const activeSeason = seasons[currentIndex];
-
         currentSeason.textContent = activeSeason.number;
-
         seasonTitle.textContent = activeSeason.title;
-
         seasonDescription.textContent = activeSeason.description;
-
         counterCurrent.textContent = activeSeason.number;
-
-        /* =====================================================
-        BACKGROUND
-    ====================================================== */
-
         background.style.backgroundImage = `url("${activeSeason.image}")`;
 
-        /* =====================================================
-        BUTTON STATES
-    ====================================================== */
-
         prevButton.disabled = currentIndex === 0;
-
         nextButton.disabled = currentIndex === seasons.length - 1;
       }
-
-      /* =========================================================
-   NEXT
-========================================================= */
 
       function goNext() {
         if (currentIndex < seasons.length - 1) {
           currentIndex++;
-
           renderSeasons();
         }
       }
-
-      /* =========================================================
-   PREVIOUS
-========================================================= */
 
       function goPrevious() {
         if (currentIndex > 0) {
           currentIndex--;
-
           renderSeasons();
         }
       }
 
-      /* =========================================================
-   ARROWS
-========================================================= */
-
       nextButton.addEventListener("click", goNext);
-
       prevButton.addEventListener("click", goPrevious);
-
-      /* =========================================================
-   CIRCLE CLICK
-========================================================= */
 
       seasonItems.forEach((item) => {
         item.addEventListener("click", function () {
           const index = Number(this.dataset.seasonIndex);
-
-          if (Number.isNaN(index)) {
-            return;
-          }
-
+          if (Number.isNaN(index)) return;
           currentIndex = index;
-
           renderSeasons();
         });
       });
 
-      /* =========================================================
-   KEYBOARD
-========================================================= */
-
       document.addEventListener("keydown", function (event) {
-        if (event.key === "ArrowDown") {
-          goNext();
-        }
-
-        if (event.key === "ArrowUp") {
-          goPrevious();
-        }
+        if (event.key === "ArrowDown") goNext();
+        if (event.key === "ArrowUp") goPrevious();
       });
 
-      /* =========================================================
-   NAVBAR
-========================================================= */
-
+      // Navbar Scroll Effect
       window.addEventListener("scroll", function () {
         if (window.scrollY > 20) {
           navbar.classList.add("scrolled");
@@ -488,9 +396,16 @@
         }
       });
 
-      /* =========================================================
-   START
-========================================================= */
+      // Hamburger Menu Toggle
+      const hamburgerBtn = document.querySelector("#hamburger-btn");
+      const navMenu = document.querySelector("#nav-menu");
+
+      if (hamburgerBtn && navMenu) {
+        hamburgerBtn.addEventListener("click", () => {
+          hamburgerBtn.classList.toggle("active");
+          navMenu.classList.toggle("active");
+        });
+      }
 
       renderSeasons();
     </script>

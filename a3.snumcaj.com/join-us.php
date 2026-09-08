@@ -62,6 +62,9 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="0" />
   <title>Join Us | Matrimaa Season 5</title>
 
   <!-- Stylesheets -->
@@ -82,15 +85,27 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
       <img src="matrimaa-logo.png" alt="Matrimaa Logo" />
     </a>
 
-    <div id="nav-buttons">
-      <a href="index.php"><button type="button">HOME</button></a>
-      <a href="index.php#stats-section"><button type="button">JOURNEY</button></a>
-      <a href="index.php#gallery-section"><button type="button">GALLERY</button></a>
-      <a href="index.php#red-bg"><button type="button">ABOUT US</button></a>
-      <a href="join-us.php"><button type="button">JOIN US</button></a>
+    <!-- Hamburger Icon -->
+    <div class="hamburger" id="hamburger-menu">
+      <span></span>
+      <span></span>
+      <span></span>
     </div>
 
-    <div class="spl-btn">
+    <div id="nav-buttons">
+      <a href="index.php"><button type="button">HOME</button></a>
+      <a href="journey.php"><button type="button">JOURNEY</button></a>
+      <a href="media.php"><button type="button">GALLERY</button></a>
+      <a href="about.php"><button type="button">ABOUT US</button></a>
+      <a href="join-us.php"><button type="button">JOIN US</button></a>
+      <div class="spl-btn mobile-only">
+        <a href="partnership.php">
+          <button type="button">PARTNER WITH US</button>
+        </a>
+      </div>
+    </div>
+
+    <div class="spl-btn desktop-only">
       <a href="partnership.php">
         <button type="button">PARTNER WITH US</button>
       </a>
@@ -255,6 +270,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     <?php endif; ?>
 
     const navbar = document.querySelector("#navbar");
+    const hamburger = document.querySelector("#hamburger-menu");
+    const navButtons = document.querySelector("#nav-buttons");
 
     window.addEventListener("scroll", () => {
       if (window.scrollY > 20) {
@@ -262,6 +279,11 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
       } else {
         navbar.classList.remove("scrolled");
       }
+    });
+
+    hamburger.addEventListener("click", () => {
+      hamburger.classList.toggle("active");
+      navButtons.classList.toggle("active");
     });
   </script>
 </body>
