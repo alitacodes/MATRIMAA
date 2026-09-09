@@ -1,413 +1,864 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
-    <meta http-equiv="Pragma" content="no-cache" />
-    <meta http-equiv="Expires" content="0" />
 
-    <!-- ZALANDO SANS ONLY -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link
-      href="https://fonts.googleapis.com/css2?family=Zalando+Sans:ital,wght@0,200..900;1,200..900&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="styles.css" />
-    <link rel="stylesheet" href="journey.css" />
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="0" />
 
-    <title>Matrimaa | Journey</title>
-  </head>
+  <title>The Journey — Matrimaa</title>
 
-  <body>
-    <div id="navbar">
-      <a href="index.php">
-        <img src="matrimaa-logo.png" alt="Matrimaa Logo" />
-      </a>
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-      <div class="hamburger-menu" id="hamburger-btn">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Zalando+Sans:ital,wght@0,200..900;1,200..900&display=swap"
+    rel="stylesheet"
+  />
 
-      <div id="nav-menu">
-        <div id="nav-buttons">
-          <a href="index.php"><button type="button">HOME</button></a>
-          <a href="journey.php"
-            ><button type="button" class="active">JOURNEY</button></a
-          >
-          <a href="media.php"><button type="button">GALLERY</button></a>
-          <a href="about.php"><button type="button">ABOUT US</button></a>
-          <a href="join-us.php"><button type="button">JOIN US</button></a>
-        </div>
+  <!-- Journey CSS -->
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="journey.css" />
+</head>
 
-        <div class="spl-btn">
-          <a href="partnership.php">
-            <button type="button">PARTNER WITH US</button>
-          </a>
-        </div>
-      </div>
+<body>
+
+  <!-- =========================================================
+       NAVBAR — SAME AS LANDING PAGE
+       ========================================================= -->
+
+  <div id="navbar">
+
+    <a href="index.php">
+      <img src="matrimaa-logo.png" alt="Matrimaa Logo" />
+    </a>
+
+    <!-- Hamburger -->
+    <div class="hamburger-menu" id="hamburger-btn">
+      <span></span>
+      <span></span>
+      <span></span>
     </div>
 
-    <main class="journey-section">
-      <!-- BACKGROUND -->
+    <!-- Navigation Menu -->
+    <div id="nav-menu">
 
-      <div class="journey-background" id="journeyBackground"></div>
-      <section class="journey-content">
-        <div class="season-info">
-          <p class="season-number">
-            SEASON
+      <div id="nav-buttons">
 
-            <span id="currentSeason"> 01 </span>
+        <a href="index.php">
+          <button type="button">HOME</button>
+        </a>
+
+        <a href="journey.php">
+          <button type="button" class="active">JOURNEY</button>
+        </a>
+
+        <a href="media.php">
+          <button type="button">GALLERY</button>
+        </a>
+
+        <a href="about.php">
+          <button type="button">ABOUT US</button>
+        </a>
+
+        <a href="join-us.php">
+          <button type="button">JOIN US</button>
+        </a>
+
+      </div>
+
+      <div class="spl-btn">
+        <a href="partnership.php">
+          <button type="button">PARTNER WITH US</button>
+        </a>
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <!-- =========================================================
+       MAIN JOURNEY CONTENT
+       ========================================================= -->
+
+  <main class="page-container">
+
+    <!-- TIMELINE -->
+    <section class="timeline-section">
+
+      <div class="wrap">
+
+        <div class="section-head">
+
+          <p class="kicker">
+            Season by season
           </p>
 
-          <h2 id="seasonTitle">THE BEGINNING</h2>
+          <h2>
+            The journey so far
+            <span class="highlight-red">(Seasons 1–5)</span>
+          </h2>
 
-          <p id="seasonDescription">
-            Where the journey of celebrating motherhood began.
-          </p>
         </div>
-      </section>
 
-      <section class="season-navigation">
-        <div class="arc-area">
-          <!-- ARC -->
+      </div>
 
-          <svg
-            class="journey-arc"
-            viewBox="0 0 520 620"
-            preserveAspectRatio="none"
-            aria-hidden="true"
+
+      <div class="timeline-h-outer wrap">
+
+        <button
+          class="h-nav"
+          id="prevBtn"
+          aria-label="Previous season"
+          type="button"
+        >
+          ‹
+        </button>
+
+
+        <div
+          class="timeline"
+          id="timeline"
+          tabindex="0"
+        >
+
+          <div
+            class="items-h"
+            id="timelineItems"
           >
-            <path
-              d="
-                        M 455 35
-                        C 245 35
-                          80 170
-                          80 310
-                        C 80 450
-                          245 585
-                          455 585
-                    "
-            />
-          </svg>
 
-          <div class="season-list">
-            <button class="season-item slot-1">
-              <div class="season-circle">
-                <img src="" alt="" />
-              </div>
-
-              <span></span>
-            </button>
-
-            <button class="season-item slot-2">
-              <div class="season-circle">
-                <img src="" alt="" />
-              </div>
-
-              <span></span>
-            </button>
-
-            <button class="season-item slot-3 active">
-              <div class="season-circle">
-                <img src="" alt="" />
-              </div>
-
-              <span></span>
-            </button>
-
-            <button class="season-item slot-4">
-              <div class="season-circle">
-                <img src="" alt="" />
-              </div>
-
-              <span></span>
-            </button>
-
-            <button class="season-item slot-5">
-              <div class="season-circle">
-                <img src="" alt="" />
-              </div>
-
-              <span></span>
-            </button>
-          </div>
-
-          <div class="season-controls">
-            <button
-              id="prevSeason"
-              class="arrow-button"
-              aria-label="Previous Season"
-            >
-              ↑
-            </button>
-
-            <div class="season-counter">
-              <span id="counterCurrent"> 01 </span>
-
-              <span class="counter-divider"> / </span>
-
-              <span id="counterTotal"> 06 </span>
+            <div class="spine-h">
+              <div
+                class="spine-h-fill"
+                id="spineFill"
+              ></div>
             </div>
 
-            <button
-              id="nextSeason"
-              class="arrow-button"
-              aria-label="Next Season"
-            >
-              ↓
-            </button>
           </div>
-        </div>
-      </section>
-    </main>
 
-    <footer id="footer-section">
-      <div class="footer-container">
-        <div class="footer-col brand-col">
-          <div class="footer-logo">
-            <img src="matrimaaLogoInverted.png" alt="matrimaa logo" />
-          </div>
-          <p class="footer-tagline">
-            Honoring Motherhood — From Regional to Global Recognition.
-          </p>
-
-          <div class="social-links">
-            <a href="#" aria-label="Instagram">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 640 640"
-                width="35"
-                height="35"
-                fill="currentColor"
-              >
-                <path
-                  d="M320.3 205C256.8 204.8 205.2 256.2 205 319.7C204.8 383.2 256.2 434.8 319.7 435C383.2 435.2 434.8 383.8 435 320.3C435.2 256.8 383.8 205.2 320.3 205zM319.7 245.4C360.9 245.2 394.4 278.5 394.6 319.7C394.8 360.9 361.5 394.4 320.3 394.6C279.1 394.8 245.6 361.5 245.4 320.3C245.2 279.1 278.5 245.6 319.7 245.4zM413.1 200.3C413.1 185.5 425.1 173.5 439.9 173.5C454.7 173.5 466.7 185.5 466.7 200.3C466.7 215.1 454.7 227.1 439.9 227.1C425.1 227.1 413.1 215.1 413.1 200.3zM542.8 227.5C541.1 191.6 532.9 159.8 506.6 133.6C480.4 107.4 448.6 99.2 412.7 97.4C375.7 95.3 264.8 95.3 227.8 97.4C192 99.1 160.2 107.3 133.9 133.5C107.6 159.7 99.5 191.5 97.7 227.4C95.6 264.4 95.6 375.3 97.7 412.3C99.4 448.2 107.6 480 133.9 506.2C160.2 532.4 191.9 540.6 227.8 542.4C264.8 544.5 375.7 544.5 412.7 542.4C448.6 540.7 480.4 532.5 506.6 506.2C532.8 480 541 448.2 542.8 412.3C544.9 375.3 544.9 264.5 542.8 227.5zM495 452C487.2 471.6 472.1 486.7 452.4 494.6C422.9 506.3 352.9 503.6 320.3 503.6C287.7 503.6 217.6 506.2 188.2 494.6C168.6 486.8 153.5 471.7 145.6 452C133.9 422.5 136.6 352.5 136.6 319.9C136.6 287.3 134 217.2 145.6 187.8C153.4 168.2 168.5 153.1 188.2 145.2C217.7 133.5 287.7 136.2 320.3 136.2C352.9 136.2 423 133.6 452.4 145.2C472 153 487.1 168.1 495 187.8C506.7 217.3 504 287.3 504 319.9C504 352.5 506.7 422.6 495 452z"
-                />
-              </svg>
-            </a>
-
-            <a href="#" aria-label="Facebook">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 640 640"
-                width="33"
-                height="33"
-                fill="currentColor"
-              >
-                <path
-                  d="M576 320C576 178.6 461.4 64 320 64C178.6 64 64 178.6 64 320C64 440 146.7 540.8 258.2 568.5L258.2 398.2L205.4 398.2L205.4 320L258.2 320L258.2 286.3C258.2 199.2 297.6 158.8 383.2 158.8C399.4 158.8 427.4 162 438.9 165.2L438.9 236C432.9 235.4 422.4 235 409.3 235C367.3 235 351.1 250.9 351.1 292.2L351.1 320L434.7 320L420.3 398.2L351 398.2L351 574.1C477.8 558.8 576 450.9 576 320z"
-                />
-              </svg>
-            </a>
-
-            <a href="#" aria-label="mail">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 640 640"
-                width="34"
-                height="34"
-                fill="currentColor"
-              >
-                <path
-                  d="M125.4 128C91.5 128 64 155.5 64 189.4C64 190.3 64 191.1 64.1 192L64 192L64 448C64 483.3 92.7 512 128 512L512 512C547.3 512 576 483.3 576 448L576 192L575.9 192C575.9 191.1 576 190.3 576 189.4C576 155.5 548.5 128 514.6 128L125.4 128zM528 256.3L528 448C528 456.8 520.8 464 512 464L128 464C119.2 464 112 456.8 112 448L112 256.3L266.8 373.7C298.2 397.6 341.7 397.6 373.2 373.7L528 256.3zM112 189.4C112 182 118 176 125.4 176L514.6 176C522 176 528 182 528 189.4C528 193.6 526 197.6 522.7 200.1L344.2 335.5C329.9 346.3 310.1 346.3 295.8 335.5L117.3 200.1C114 197.6 112 193.6 112 189.4z"
-                />
-              </svg>
-            </a>
-          </div>
         </div>
 
-        <div class="footer-col contact-col">
-          <h4>C O N T A C T</h4>
-          <ul class="contact-list">
-            <li><span class="icon">📞</span> +91 9830006595</li>
-            <li><span class="icon">📍</span> Kolkata: BIA, Chinar Park</li>
-            <li>
-              <span class="icon">🌐</span>
-              <a
-                href="https://groomingdestination.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                https://groomingdestination.com/
-              </a>
-            </li>
-          </ul>
-        </div>
 
-        <div class="footer-col cta-col">
-          <h4>B E G I N &nbsp; Y O U R &nbsp; J O U R N E Y</h4>
-          <p>
-            Auditions open across Kolkata, Durgapur, Siliguri &amp; Bangalore
-            for Season 6.
-          </p>
-          <a href="join-us.php">
-            <button type="button" class="footer-btn">REGISTER NOW</button>
-          </a>
-        </div>
+        <button
+          class="h-nav"
+          id="nextBtn"
+          aria-label="Next season"
+          type="button"
+        >
+          ›
+        </button>
+
       </div>
 
-      <div class="footer-bottom">
-        <hr class="footer-divider" />
+    </section>
+
+
+    <!-- NEXT CHAPTER -->
+    <section class="next">
+
+      <div class="wrap">
+
+        <div
+          class="next-node"
+          id="nextNode"
+        >
+          06
+        </div>
+
+        <h3 id="nextTitle">
+          Season 06 — yet to be written
+        </h3>
+
         <p>
-          © 2026 MATRIMAA. All rights reserved. Crafted in honor of every
-          mother's story.
+          Every year, Matrimaa adds one more mother's story to this line.
+          This is where the next chapter will unfold.
         </p>
+
       </div>
-    </footer>
 
-    <script>
-      const seasons = [
-        {
-          number: "01",
-          title: "THE BEGINNING",
-          description: "Where the journey of celebrating motherhood began.",
-          image: "Picture5.jpg",
-        },
+    </section>
 
-        {
-          number: "02",
-          title: "A NEW CHAPTER",
-          description:
-            "A growing celebration of strength, grace and motherhood.",
-          image: "Picture6.jpg",
-        },
+  </main>
 
-        {
-          number: "03",
-          title: "RISING TOGETHER",
-          description:
-            "Stories of women coming together and inspiring one another.",
-          image: "Picture7.jpg",
-        },
 
-        {
-          number: "04",
-          title: "CELEBRATING HER",
-          description: "A celebration of every woman and every mother's story.",
-          image: "Picture9.jpg",
-        },
+  <!-- =========================================================
+       IMAGE LIGHTBOX
+       ========================================================= -->
 
-        {
-          number: "05",
-          title: "BEYOND BORDERS",
-          description: "Taking the spirit of Matrimaa towards a wider horizon.",
-          image: "Picture5.jpg",
-        },
+  <div
+    class="image-modal"
+    id="imageModal"
+    aria-hidden="true"
+  >
 
-        {
-          number: "06",
-          title: "THE NEW CHAPTER",
-          description:
-            "A new season. A new beginning. A bigger celebration of motherhood.",
-          image: "Picture9.jpg",
-        },
-      ];
+    <div class="image-modal-content">
 
-      const seasonItems = document.querySelectorAll(".season-item");
-      const currentSeason = document.getElementById("currentSeason");
-      const seasonTitle = document.getElementById("seasonTitle");
-      const seasonDescription = document.getElementById("seasonDescription");
-      const prevButton = document.getElementById("prevSeason");
-      const nextButton = document.getElementById("nextSeason");
-      const counterCurrent = document.getElementById("counterCurrent");
-      const counterTotal = document.getElementById("counterTotal");
-      const navbar = document.getElementById("navbar");
-      const background = document.getElementById("journeyBackground");
+      <button
+        class="modal-close"
+        id="modalClose"
+        type="button"
+        aria-label="Close image"
+      >
+        &times;
+      </button>
 
-      const CENTER_SLOT = 2;
-      let currentIndex = 0;
+      <img
+        id="modalImg"
+        src=""
+        alt="Expanded View"
+      />
 
-      counterTotal.textContent = String(seasons.length).padStart(2, "0");
+    </div>
 
-      function renderSeasons() {
-        seasonItems.forEach((item, slotIndex) => {
-          const seasonIndex = currentIndex + (slotIndex - CENTER_SLOT);
+  </div>
 
-          if (seasonIndex < 0 || seasonIndex >= seasons.length) {
-            item.style.visibility = "hidden";
-            return;
-          }
 
-          item.style.visibility = "visible";
-          const season = seasons[seasonIndex];
-          const image = item.querySelector("img");
-          const label = item.querySelector("span");
+  <!-- =========================================================
+       FOOTER — SAME AS LANDING PAGE
+       ========================================================= -->
 
-          image.src = season.image;
-          image.alt = "Season " + season.number;
-          label.textContent = "SEASON " + season.number;
-          item.dataset.seasonIndex = seasonIndex;
-          item.classList.toggle("active", seasonIndex === currentIndex);
-        });
+  <footer id="footer-section">
 
-        const activeSeason = seasons[currentIndex];
-        currentSeason.textContent = activeSeason.number;
-        seasonTitle.textContent = activeSeason.title;
-        seasonDescription.textContent = activeSeason.description;
-        counterCurrent.textContent = activeSeason.number;
-        background.style.backgroundImage = `url("${activeSeason.image}")`;
+    <div class="footer-container">
 
-        prevButton.disabled = currentIndex === 0;
-        nextButton.disabled = currentIndex === seasons.length - 1;
+
+      <!-- BRAND -->
+      <div class="footer-col brand-col">
+
+        <div class="footer-logo">
+
+          <img
+            src="matrimaaLogoInverted.png"
+            alt="Matrimaa logo"
+          />
+
+        </div>
+
+
+        <p class="footer-tagline">
+          Honoring Motherhood — From Regional to Global Recognition.
+        </p>
+
+
+        <!-- SOCIAL LINKS -->
+        <div class="social-links">
+
+          <!-- Instagram -->
+          <a href="#" aria-label="Instagram">
+
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 640 640"
+              width="35"
+              height="35"
+              fill="currentColor"
+            >
+
+              <path
+                d="M320.3 205C256.8 204.8 205.2 256.2 205 319.7C204.8 383.2 256.2 434.8 319.7 435C383.2 435.2 434.8 383.8 435 320.3C435.2 256.8 383.8 205.2 320.3 205zM319.7 245.4C360.9 245.2 394.4 278.5 394.6 319.7C394.8 360.9 361.5 394.4 320.3 394.6C279.1 394.8 245.6 361.5 245.4 320.3C245.2 279.1 278.5 245.6 319.7 245.4zM413.1 200.3C413.1 185.5 425.1 173.5 439.9 173.5C454.7 173.5 466.7 185.5 466.7 200.3C466.7 215.1 454.7 227.1 439.9 227.1C425.1 227.1 413.1 215.1 413.1 200.3zM542.8 227.5C541.1 191.6 532.9 159.8 506.6 133.6C480.4 107.4 448.6 99.2 412.7 97.4C375.7 95.3 264.8 95.3 227.8 97.4C192 99.1 160.2 107.3 133.9 133.5C107.6 159.7 99.5 191.5 97.7 227.4C95.6 264.4 95.6 375.3 97.7 412.3C99.4 448.2 107.6 480 133.9 506.2C160.2 532.4 191.9 540.6 227.8 542.4C264.8 544.5 375.7 544.5 412.7 542.4C448.6 540.7 480.4 532.5 506.6 506.2C532.8 480 541 448.2 542.8 412.3C544.9 375.3 544.9 264.5 542.8 227.5zM495 452C487.2 471.6 472.1 486.7 452.4 494.6C422.9 506.3 352.9 503.6 320.3 503.6C287.7 503.6 217.6 506.2 188.2 494.6C168.6 486.8 153.5 471.7 145.6 452C133.9 422.5 136.6 352.5 136.6 319.9C136.6 287.3 134 217.2 145.6 187.8C153.4 168.2 168.5 153.1 188.2 145.2C217.7 133.5 287.7 136.2 320.3 136.2C352.9 136.2 423 133.6 452.4 145.2C472 153 487.1 168.1 495 187.8C506.7 217.3 504 287.3 504 319.9C504 352.5 506.7 422.6 495 452z"
+              />
+
+            </svg>
+
+          </a>
+
+
+          <!-- Facebook -->
+          <a href="#" aria-label="Facebook">
+
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 640 640"
+              width="33"
+              height="33"
+              fill="currentColor"
+            >
+
+              <path
+                d="M576 320C576 178.6 461.4 64 320 64C178.6 64 64 178.6 64 320C64 440 146.7 540.8 258.2 568.5L258.2 398.2L205.4 398.2L205.4 320L258.2 320L258.2 286.3C258.2 199.2 297.6 158.8 383.2 158.8C399.4 158.8 427.4 162 438.9 165.2L438.9 236C432.9 235.4 422.4 235 409.3 235C367.3 235 351.1 250.9 351.1 292.2L351.1 320L434.7 320L420.3 398.2L351 398.2L351 574.1C477.8 558.8 576 450.9 576 320z"
+              />
+
+            </svg>
+
+          </a>
+
+
+          <!-- Email -->
+          <a href="#" aria-label="mail">
+
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 640 640"
+              width="34"
+              height="34"
+              fill="currentColor"
+            >
+
+              <path
+                d="M125.4 128C91.5 128 64 155.5 64 189.4C64 190.3 64 191.1 64.1 192L64 192L64 448C64 483.3 92.7 512 128 512L512 512C547.3 512 576 483.3 576 448L576 192L575.9 192C576 190.3 576 189.4C576 155.5 548.5 128 514.6 128L125.4 128zM528 256.3L528 448C528 456.8 520.8 464 512 464L128 464C119.2 464 112 456.8 112 448L112 256.3L266.8 373.7C298.2 397.6 341.7 397.6 373.2 373.7L528 256.3zM112 189.4C112 182 118 176 125.4 176L514.6 176C522 176 528 182 528 189.4C528 193.6 526 197.6 522.7 200.1L344.2 335.5C329.9 346.3 310.1 346.3 295.8 335.5L117.3 200.1C114 197.6 112 193.6 112 189.4z"
+              />
+
+            </svg>
+
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <!-- CONTACT -->
+      <div class="footer-col contact-col">
+
+        <h4>C O N T A C T</h4>
+
+        <ul class="contact-list">
+
+          <li>
+            <span class="icon">📞</span>
+            +91 9830006595
+          </li>
+
+          <li>
+            <span class="icon">📍</span>
+            Kolkata: BIA, Chinar Park
+          </li>
+
+          <li>
+
+            <span class="icon">🌐</span>
+
+            <a
+              href="https://groomingdestination.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              https://groomingdestination.com/
+            </a>
+
+          </li>
+
+        </ul>
+
+      </div>
+
+
+      <!-- CTA -->
+      <div class="footer-col cta-col">
+
+        <h4>
+          B E G I N &nbsp; Y O U R &nbsp; J O U R N E Y
+        </h4>
+
+        <p>
+          Auditions open across Kolkata, Durgapur, Siliguri &amp; Bangalore
+          for Season 6.
+        </p>
+
+        <a href="join-us.php">
+
+          <button
+            type="button"
+            class="footer-btn"
+          >
+            REGISTER NOW
+          </button>
+
+        </a>
+
+      </div>
+
+    </div>
+
+
+    <!-- FOOTER BOTTOM -->
+    <div class="footer-bottom">
+
+      <hr class="footer-divider" />
+
+      <p>
+        © 2026 MATRIMAA. All rights reserved.
+        Crafted in honor of every mother's story.
+      </p>
+
+    </div>
+
+  </footer>
+
+
+  <!-- =========================================================
+       JAVASCRIPT
+       ========================================================= -->
+
+  <script>
+
+    /* =========================================================
+       NAVBAR SCROLL EFFECT
+       ========================================================= */
+
+    const navbar = document.querySelector("#navbar");
+
+    window.addEventListener("scroll", () => {
+
+      if (window.scrollY > 20) {
+        navbar.classList.add("scrolled");
+      } else {
+        navbar.classList.remove("scrolled");
       }
 
-      function goNext() {
-        if (currentIndex < seasons.length - 1) {
-          currentIndex++;
-          renderSeasons();
-        }
-      }
+    });
 
-      function goPrevious() {
-        if (currentIndex > 0) {
-          currentIndex--;
-          renderSeasons();
-        }
-      }
 
-      nextButton.addEventListener("click", goNext);
-      prevButton.addEventListener("click", goPrevious);
+    /* =========================================================
+       HAMBURGER MENU
+       ========================================================= */
 
-      seasonItems.forEach((item) => {
-        item.addEventListener("click", function () {
-          const index = Number(this.dataset.seasonIndex);
-          if (Number.isNaN(index)) return;
-          currentIndex = index;
-          renderSeasons();
-        });
+    const hamburgerBtn =
+      document.querySelector("#hamburger-btn");
+
+    const navMenu =
+      document.querySelector("#nav-menu");
+
+    if (hamburgerBtn && navMenu) {
+
+      hamburgerBtn.addEventListener("click", () => {
+
+        hamburgerBtn.classList.toggle("active");
+        navMenu.classList.toggle("active");
+
       });
 
-      document.addEventListener("keydown", function (event) {
-        if (event.key === "ArrowDown") goNext();
-        if (event.key === "ArrowUp") goPrevious();
-      });
+    }
 
-      // Navbar Scroll Effect
-      window.addEventListener("scroll", function () {
-        if (window.scrollY > 20) {
-          navbar.classList.add("scrolled");
+
+    /* =========================================================
+       SEASONS DATA
+       ========================================================= */
+
+    const seasons = [
+
+      {
+        seasonNum: 1,
+        year: "2022",
+        kicker: "Where it began",
+        title: "The Debut in Kolkata",
+        body:
+          "Curated by Tuhinaa Pandey (Mrs. India, Timeless Beauty 2019) to give mothers a stage to rediscover themselves. Presented by George Telegraph Film & Television Institute with the finale at Hotel Hindustan International on Sept 25, 2022.",
+        image: "S11.jpg",
+        facts: [
+          "Kolkata Finale",
+          "Hotel Hindustan International",
+          "George Telegraph"
+        ]
+      },
+
+      {
+        seasonNum: 2,
+        year: "2023",
+        kicker: "Expanding horizons",
+        title: "Building momentum",
+        body:
+          "Brought together 75 contestants, 3 sub-contests, and 25 finalists with the finale held at Hotel Hindustan International on Oct 14, 2023.",
+        image: "S21.jpg",
+        facts: [
+          "75 Contestants",
+          "3 Sub-contests",
+          "25 Finalists"
+        ]
+      },
+
+      {
+        seasonNum: 3,
+        year: "2024",
+        kicker: "Grooming & talent",
+        title: "A growing tradition",
+        body:
+          "Featured cooking rounds, grooming sessions, eminent judges like Biplab Dasgupta & Rupa Majumdar, and diverse brand partnerships.",
+        image: "S31.jpg",
+        facts: [
+          "Cooking Round",
+          "Grooming Sessions",
+          "Eminent Jury"
+        ]
+      },
+
+      {
+        seasonNum: 4,
+        year: "2025",
+        kicker: "Scale & celebration",
+        title: "Grandeur at ICCR",
+        body:
+          "25 finalists competed across 3 sub-contests (Poster Round, Cooking Round, Beauty & Grooming). The finale took place at ICCR Kolkata on May 11, 2025, presented by IIHM.",
+        image: "S41.jpg",
+        facts: [
+          "Presented by IIHM",
+          "Finale at ICCR",
+          "Poster & Cooking Rounds"
+        ]
+      },
+
+      {
+        seasonNum: 5,
+        year: "2026",
+        kicker: "Roots to international",
+        title: "London Mahotsav & Bengal",
+        body:
+          "Auditions across 5 districts (Kolkata, Durgapur, Burdwan, Siliguri & Berhampore) reaching 500+ mothers. Finale at BIA Kolkata (May 2026) & Grand Finale at Sattavis Patidar Centre, Wembley, London (June 2026).",
+        image: "S53.jpeg",
+        facts: [
+          "5 Districts Audition",
+          "Kolkata Finale (May)",
+          "London Grand Finale (June)"
+        ]
+      }
+
+    ];
+
+
+    const pad = (n) =>
+      String(n).padStart(2, "0");
+
+
+    /* =========================================================
+       TIMELINE RENDERING
+       ========================================================= */
+
+    const timelineHTML = seasons
+      .map((s, i) => {
+
+        const num = pad(s.seasonNum);
+
+        return `
+          <article class="h-item">
+
+            <div
+              class="node"
+              data-index="${i}"
+            >
+              <span aria-hidden="true">
+                ${num}
+              </span>
+            </div>
+
+            <div
+              class="card-panel"
+              onclick="openModal('${s.image}')"
+            >
+
+              <span class="panel-tag">
+                Season ${s.seasonNum}
+              </span>
+
+              <img
+                src="${s.image}"
+                alt="${s.title}"
+                loading="lazy"
+              />
+
+              <div class="zoom-overlay">
+                🔍 Click to View
+              </div>
+
+            </div>
+
+            <p class="kicker">
+              ${s.kicker}
+            </p>
+
+            <h3>
+              ${s.title}
+            </h3>
+
+            ${
+              s.year
+                ? `<p class="year">${s.year}</p>`
+                : ""
+            }
+
+            <p class="body">
+              ${s.body}
+            </p>
+
+            <ul class="facts">
+
+              ${s.facts
+                .map(
+                  (f) =>
+                    `<li class="hover-tag">${f}</li>`
+                )
+                .join("")}
+
+            </ul>
+
+          </article>
+        `;
+
+      })
+      .join("");
+
+
+    document
+      .getElementById("timelineItems")
+      .insertAdjacentHTML(
+        "beforeend",
+        timelineHTML
+      );
+
+
+    /* =========================================================
+       HORIZONTAL SCROLL
+       ========================================================= */
+
+    const timelineEl =
+      document.getElementById("timeline");
+
+    const spineFill =
+      document.getElementById("spineFill");
+
+    const prevBtn =
+      document.getElementById("prevBtn");
+
+    const nextBtn =
+      document.getElementById("nextBtn");
+
+    let nodes = [];
+
+    let ticking = false;
+
+
+    nodes = Array.from(
+      document.querySelectorAll(".node")
+    );
+
+
+    function maxScroll() {
+
+      return Math.max(
+        1,
+        timelineEl.scrollWidth -
+          timelineEl.clientWidth
+      );
+
+    }
+
+
+    function updateSpine() {
+
+      const max = maxScroll();
+
+      const currentScroll =
+        timelineEl.scrollLeft;
+
+      const progress =
+        Math.min(
+          1,
+          Math.max(
+            0,
+            currentScroll / max
+          )
+        );
+
+
+      spineFill.style.width =
+        progress * 100 + "%";
+
+
+      const containerRect =
+        timelineEl.getBoundingClientRect();
+
+
+      nodes.forEach((node, index) => {
+
+        const nRect =
+          node.getBoundingClientRect();
+
+        const nodeMid =
+          nRect.left +
+          nRect.width / 2;
+
+
+        const isPastCenter =
+          nodeMid <=
+          containerRect.left +
+            containerRect.width *
+              0.75;
+
+
+        const isAtEnd =
+          currentScroll +
+            timelineEl.clientWidth >=
+            timelineEl.scrollWidth - 30 &&
+          index >= nodes.length - 2;
+
+
+        if (
+          isPastCenter ||
+          isAtEnd
+        ) {
+
+          node.classList.add("active");
+
         } else {
-          navbar.classList.remove("scrolled");
+
+          node.classList.remove("active");
+
         }
+
       });
 
-      // Hamburger Menu Toggle
-      const hamburgerBtn = document.querySelector("#hamburger-btn");
-      const navMenu = document.querySelector("#nav-menu");
 
-      if (hamburgerBtn && navMenu) {
-        hamburgerBtn.addEventListener("click", () => {
-          hamburgerBtn.classList.toggle("active");
-          navMenu.classList.toggle("active");
+      prevBtn.disabled =
+        currentScroll <= 2;
+
+      nextBtn.disabled =
+        currentScroll >= max - 5;
+
+      ticking = false;
+
+    }
+
+
+    function step() {
+
+      const first =
+        timelineEl.querySelector(
+          ".h-item"
+        );
+
+      return first
+        ? first.getBoundingClientRect()
+            .width + 30
+        : 300;
+
+    }
+
+
+    prevBtn.addEventListener(
+      "click",
+      () => {
+
+        timelineEl.scrollBy({
+          left: -step(),
+          behavior: "smooth"
         });
-      }
 
-      renderSeasons();
-    </script>
-  </body>
+      }
+    );
+
+
+    nextBtn.addEventListener(
+      "click",
+      () => {
+
+        timelineEl.scrollBy({
+          left: step(),
+          behavior: "smooth"
+        });
+
+      }
+    );
+
+
+    timelineEl.addEventListener(
+      "scroll",
+      () => {
+
+        if (!ticking) {
+
+          window.requestAnimationFrame(
+            updateSpine
+          );
+
+          ticking = true;
+
+        }
+
+      },
+      { passive: true }
+    );
+
+
+    updateSpine();
+
+
+    /* =========================================================
+       LIGHTBOX
+       ========================================================= */
+
+    const modal =
+      document.getElementById(
+        "imageModal"
+      );
+
+    const modalImg =
+      document.getElementById(
+        "modalImg"
+      );
+
+    const modalClose =
+      document.getElementById(
+        "modalClose"
+      );
+
+
+    function openModal(imgSrc) {
+
+      modalImg.src = imgSrc;
+
+      modal.classList.add("active");
+
+      modal.setAttribute(
+        "aria-hidden",
+        "false"
+      );
+
+    }
+
+
+    modalClose.addEventListener(
+      "click",
+      () => {
+
+        modal.classList.remove(
+          "active"
+        );
+
+        modal.setAttribute(
+          "aria-hidden",
+          "true"
+        );
+
+      }
+    );
+
+
+    modal.addEventListener(
+      "click",
+      (e) => {
+
+        if (e.target === modal) {
+
+          modal.classList.remove(
+            "active"
+          );
+
+          modal.setAttribute(
+            "aria-hidden",
+            "true"
+          );
+
+        }
+
+      }
+    );
+
+  </script>
+
+</body>
+
 </html>

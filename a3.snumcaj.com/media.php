@@ -101,7 +101,7 @@
             <div class="glass-card item-3d" data-index="0" data-category="season1">
               <div class="card-inner">
                 <div class="badge">SEASON 1 • 2022</div>
-                <img src="Picture5.jpg" alt="Season 1" />
+                <img src="S11.jpg" alt="Season 1" />
                 <div class="card-content">
                   <h3>The Grand Inception</h3>
                   <p>The Journey Began • Kolkata</p>
@@ -116,7 +116,7 @@
             <div class="glass-card item-3d" data-index="1" data-category="season2">
               <div class="card-inner">
                 <div class="badge">SEASON 2 • 2023</div>
-                <img src="Picture6.jpg" alt="Season 2" />
+                <img src="S21.jpg" alt="Season 2" />
                 <div class="card-content">
                   <h3>Empowerment Unveiled</h3>
                   <p>Expanding the Wings of Talent</p>
@@ -130,8 +130,8 @@
             <!-- SEASON 3 -->
             <div class="glass-card item-3d" data-index="2" data-category="season3">
               <div class="card-inner">
+                <img src="S31.jpg" alt="Season 3" />
                 <div class="badge">SEASON 3 • 2024</div>
-                <img src="Picture7.jpg" alt="Season 3" />
                 <div class="card-content">
                   <h3>Grooming & Elegance</h3>
                   <p>Masterclasses & Sub-Contests</p>
@@ -146,7 +146,7 @@
             <div class="glass-card item-3d" data-index="3" data-category="season4">
               <div class="card-inner">
                 <div class="badge">SEASON 4 • 2025</div>
-                <img src="Picture8.jpg" alt="Season 4" />
+                <img src="S41.jpg" alt="Season 4" />
                 <div class="card-content">
                   <h3>Crown Ceremony</h3>
                   <p>ICCR Auditorium, Kolkata</p>
@@ -161,7 +161,7 @@
             <div class="glass-card item-3d" data-index="4" data-category="season5">
               <div class="card-inner">
                 <div class="badge">SEASON 5 • 2026</div>
-                <img src="Picture9.jpg" alt="Season 5" />
+                <img src="S52.jpg" alt="Season 5" />
                 <div class="card-content">
                   <h3>The Grand Finale London</h3>
                   <p>Sattavis Patidar Centre, Wembley</p>
@@ -191,18 +191,7 @@
         <!-- SEASON 5 -->
         <div class="grid-item season5">
           <div class="masonry-card">
-            <img src="Picture5.jpg" alt="London Grand Finale" />
-            <div class="overlay-info">
-              <span class="category">SEASON 5</span>
-              <h4>London Mahotsav</h4>
-              <p>International Grand Finale • Wembley</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="grid-item season5">
-          <div class="masonry-card">
-            <img src="Picture6.jpg" alt="Season 5 Red Carpet" />
+            <img src="S53.jpeg" alt="Season 5 Red Carpet" />
             <div class="overlay-info">
               <span class="category">SEASON 5</span>
               <h4>Red Carpet Elegance</h4>
@@ -213,7 +202,7 @@
 
         <div class="grid-item season5">
           <div class="masonry-card">
-            <img src="Picture7.jpg" alt="Women Leadership Forum" />
+            <img src="S54.jpeg" alt="Women Leadership Forum" />
             <div class="overlay-info">
               <span class="category">SEASON 5</span>
               <h4>Women Leadership Forum</h4>
@@ -224,7 +213,7 @@
 
         <div class="grid-item season5">
           <div class="masonry-card">
-            <img src="Picture8.jpg" alt="Season 5 Gala" />
+            <img src="S55.jpeg" alt="Season 5 Gala" />
             <div class="overlay-info">
               <span class="category">SEASON 5</span>
               <h4>Gala Evening</h4>
@@ -236,7 +225,7 @@
         <!-- SEASON 4 -->
         <div class="grid-item season4">
           <div class="masonry-card">
-            <img src="Picture9.jpg" alt="Season 4 Jury" />
+            <img src="S41.jpg" alt="Season 4 Jury" />
             <div class="overlay-info">
               <span class="category">SEASON 4</span>
               <h4>Jury Felicitations</h4>
@@ -247,7 +236,7 @@
 
         <div class="grid-item season4">
           <div class="masonry-card">
-            <img src="Picture10.jpg" alt="Season 4 Talent Round" />
+            <img src="S42.jpg" alt="Season 4 Talent Round" />
             <div class="overlay-info">
               <span class="category">SEASON 4</span>
               <h4>Talent Showcase</h4>
@@ -258,7 +247,7 @@
 
         <div class="grid-item season4">
           <div class="masonry-card">
-            <img src="Picture11.jpg" alt="Season 4 Winners" />
+            <img src="S43.jpg" alt="Season 4 Winners" />
             <div class="overlay-info">
               <span class="category">SEASON 4</span>
               <h4>Subtitle Winners</h4>
@@ -270,7 +259,7 @@
         <!-- SEASON 3 -->
         <div class="grid-item season3">
           <div class="masonry-card">
-            <img src="Picture13.jpg" alt="Grooming Masterclass" />
+            <img src="S31.jpg" alt="Grooming Masterclass" />
             <div class="overlay-info">
               <span class="category">SEASON 3</span>
               <h4>Grooming Masterclass</h4>
@@ -281,7 +270,7 @@
 
         <div class="grid-item season3">
           <div class="masonry-card">
-            <img src="Picture14.jpg" alt="Styling Workshop" />
+            <img src="S32.jpg" alt="Styling Workshop" />
             <div class="overlay-info">
               <span class="category">SEASON 3</span>
               <h4>Styling & Makeover</h4>
@@ -293,7 +282,7 @@
         <!-- SEASON 2 -->
         <div class="grid-item season2">
           <div class="masonry-card">
-            <img src="Picture8.jpg" alt="Culinary Round" />
+            <img src="S21.jpg" alt="Culinary Round" />
             <div class="overlay-info">
               <span class="category">SEASON 2</span>
               <h4>Culinary Talent Round</h4>
@@ -304,7 +293,7 @@
 
         <div class="grid-item season2">
           <div class="masonry-card">
-            <img src="Picture9.jpg" alt="Traditional Round" />
+            <img src="S52.jpg" alt="Traditional Round" />
             <div class="overlay-info">
               <span class="category">SEASON 2</span>
               <h4>Ethnic Splendor</h4>
@@ -316,7 +305,7 @@
         <!-- SEASON 1 -->
         <div class="grid-item season1">
           <div class="masonry-card">
-            <img src="Picture12.jpg" alt="First Auditions" />
+            <img src="S11.jpg" alt="First Auditions" />
             <div class="overlay-info">
               <span class="category">SEASON 1</span>
               <h4>First Auditions</h4>
@@ -328,7 +317,7 @@
         <!-- PORTFOLIO -->
         <div class="grid-item portfolio">
           <div class="masonry-card">
-            <img src="Picture6.jpg" alt="Matrimaa Portfolio" />
+            <img src="P1.jpg" alt="Matrimaa Portfolio" />
             <div class="overlay-info">
               <span class="category">PORTFOLIO</span>
               <h4>Matrimaa Portfolio</h4>
@@ -339,7 +328,7 @@
 
         <div class="grid-item portfolio">
           <div class="masonry-card">
-            <img src="Picture11.jpg" alt="Portfolio Portrait" />
+            <img src="P2.jpg" alt="Portfolio Portrait" />
             <div class="overlay-info">
               <span class="category">PORTFOLIO</span>
               <h4>Portrait Collection</h4>
